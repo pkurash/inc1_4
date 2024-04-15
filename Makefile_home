@@ -1,0 +1,67 @@
+# inclnll Makefile driver
+
+# Select the various type of Makefile:
+# Makefile_cern to run on CERN computer (rsplus/iax) (ibm)
+# Makefile_home to run on PC/Linux
+# Makefile_lapp to run on DEC/alpha
+# Some modifications may be needed to adapt the chosen Makefile to your computer system
+MAKE_FILE = Makefile_home
+
+all: 	alfas bases bfg_photon hadron  hadlib pholib
+
+alfas:	FORCE
+	cd alfas/src && cp $(MAKE_FILE) Makefile 
+	cd alfas/src && $(MAKE) install
+	cd alfas/src && $(MAKE)  clean
+	
+bases:	FORCE
+	cd bases/src && cp $(MAKE_FILE) Makefile
+	cd bases/src && $(MAKE) install
+	cd bases/src && $(MAKE) clean
+	
+bfg_photon:	FORCE
+	cd frag/bfg_photon/src && cp $(MAKE_FILE) Makefile
+	cd frag/bfg_photon/src && $(MAKE) install
+	cd frag/bfg_photon/src && $(MAKE) clean
+	
+hadron:	FORCE
+	cd frag/hadron/src && cp $(MAKE_FILE) Makefile
+	cd frag/hadron/src && $(MAKE) install
+	cd frag/hadron/src && $(MAKE) clean
+	
+hadlib:	FORCE
+	cd hadlib/src && cp $(MAKE_FILE) Makefile
+	cd hadlib/src && $(MAKE) install
+	cd hadlib/src && $(MAKE) clean
+	
+pholib:	FORCE
+	cd pholib/src && cp $(MAKE_FILE) Makefile
+	cd pholib/src && $(MAKE) install
+	cd pholib/src && $(MAKE) clean
+			
+clean: 
+	cd alfas/lib && rm -f *.a
+	cd alfas/src && rm -f Makefile
+	cd bases/lib && rm -f *.a
+	cd bases/src && rm -f Makefile
+	cd frag/bfg_photon/lib && rm -f *.a
+	cd frag/bfg_photon/src && rm -f Makefile
+	cd frag/hadron/lib && rm -f *.a
+	cd frag/hadron/src && rm -f Makefile
+	cd hadlib/lib && rm -f *.a
+	cd hadlib/src && rm -f Makefile
+	cd pholib/lib && rm -f *.a
+	cd pholib/src && rm -f Makefile
+	cd working && rm -f inclnll
+
+working:FORCE
+	cd merged/src && cp $(MAKE_FILE) Makefile
+	cd merged/src && $(MAKE)
+	mv merged/src/inclnll working/.
+	
+	       
+tar:	clean
+	cd .. && tar -cvf inc1_4.tar inc1_4 
+	cd .. && gzip inc1_4.tar
+	
+FORCE:	

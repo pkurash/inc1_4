@@ -1,0 +1,128 @@
+ 
+  STRUCTURE FUNCTIONS FROM PDFLIB
+  THE PROTON STRUCT FUNCT. ARE FROM THE PDFLIB TABLES: NGROUP =            4  NSET =           1
+  THE PROTON : LAMBDA=  0.326
+
+
+
+    PROJECTILE=proton    
+    TARGET=PROTON    
+ 
+  ORDER OF STR. FUN.=           1   CONVENTION OF STR. FUN.=           0
+  LAMBDA IN STR. FUN.=  0.326000005006790       GeV LAMBDA IN ALFAS=  0.326000005006790       GeV
+  Q02 VALUES : FOR PROTON Q02=   1.69000000000000      GeV^2  FOR PION=   1.69000000000000      GeV^2
+ 
+  ANOMALOUS PHOTON FRAGMENTATION FROM BOURHIS-GUILLET
+  SET II, LARGE GLUON
+   
+  Units for cross section (hbar*c)^2=   389350000.000000     
+  pb/GeV^2 when (hbar*c)^2 =0.38935D+09 
+  mb/GeV^2 when (hbar*c)^2 =0.38935D0 
+     cross section   DSIG/DY/DPT
+  at rapidity=   0.00000000000000     
+  Inclusive production of photon
+  ABFS NUMBER OF INTEGRATION POINTS : NVINT=          32    NWINT=          32
+ 
+  RENOR SCALE**2 =    1.00000000000000      *PT2 (cc2 is used)
+  FACTO SCALE**2 =    1.00000000000000      *PT2 (cc1 is used)
+ 
+  NUMBER OF OPEN FLAVORS=           4
+ 
+  CHARM INCLUDED IN STRUCTURE FUNCTIONS
+     square root of s=   7000.00000000000      GeV        FQQ=   0.00000000000000              FQG=   0.00000000000000              DPQ=   0.00000000000000     
+  FACTO SCALE**2 IN FRAG =    1.00000000000000      *PT2 (ccd is used)
+  in abfs YMAX   8.63052184483548     
+  in abfs y is    0.00000000000000     
+   ****** Pt    1.25000000000000       GeV/c  SIGTOT NLL    22613388.8126518     
+  including   BORN =   1366671.72004989           ANOMA =   17579102.8393598           and HIGH ORDER =   3667614.25324213     
+  K factor ABFS NLL/BORN    16.5463208764035     
+  in abfs YMAX   8.41541044807568     
+  in abfs y is    0.00000000000000     
+   ****** Pt    1.55000000000000       GeV/c  SIGTOT NLL    19268644.7531884     
+  including   BORN =   1560493.31655681           ANOMA =   14467881.3016923           and HIGH ORDER =   3240270.13493929     
+  K factor ABFS NLL/BORN    12.3477906305323     
+  in abfs YMAX   8.04273510850478     
+  in abfs y is    0.00000000000000     
+   ****** Pt    2.25000000000000       GeV/c  SIGTOT NLL    8201294.35524251     
+  including   BORN =   1042460.20862561           ANOMA =   5840168.17792858           and HIGH ORDER =   1318665.96868832     
+  K factor ABFS NLL/BORN    7.86724930830228     
+  in abfs YMAX   7.84206436202220     
+  in abfs y is    0.00000000000000     
+   ****** Pt    2.75000000000000       GeV/c  SIGTOT NLL    4577792.37562336     
+  including   BORN =   708208.457973295           ANOMA =   3130526.70873052           and HIGH ORDER =   739057.208919549     
+  K factor ABFS NLL/BORN    6.46390525852204     
+  in abfs YMAX   7.67501021613451     
+  in abfs y is    0.00000000000000     
+   ****** Pt    3.25000000000000       GeV/c  SIGTOT NLL    2714331.78692119     
+  including   BORN =   484400.140584416           ANOMA =   1788994.68225103           and HIGH ORDER =   440936.964085748     
+  K factor ABFS NLL/BORN    5.60349091485899     
+  in abfs YMAX   7.53190930106521     
+  in abfs y is    0.00000000000000     
+   ****** Pt    3.75000000000000       GeV/c  SIGTOT NLL    1699120.96434006     
+  including   BORN =   338204.712648860           ANOMA =   1083490.68345092           and HIGH ORDER =   277425.568240283     
+  K factor ABFS NLL/BORN    5.02394230710844     
+  in abfs YMAX   7.40674607647847     
+  in abfs y is    0.00000000000000     
+   ****** Pt    4.25000000000000       GeV/c  SIGTOT NLL    1109753.32830574     
+  including   BORN =   240923.736300911           ANOMA =   686678.189591753           and HIGH ORDER =   182151.402413076     
+  K factor ABFS NLL/BORN    4.60624322594628     
+  in abfs YMAX   7.29552034953140     
+  in abfs y is    0.00000000000000     
+   ****** Pt    4.75000000000000       GeV/c  SIGTOT NLL    752420.538878862     
+  including   BORN =   175331.250742349           ANOMA =   453009.339247746           and HIGH ORDER =   124079.948888766     
+  K factor ABFS NLL/BORN    4.29142286781807     
+  in abfs YMAX   7.19543678893344     
+  in abfs y is    0.00000000000000     
+   ****** Pt    5.25000000000000       GeV/c  SIGTOT NLL    527270.848578480     
+  including   BORN =   130316.157327406           ANOMA =   309704.458612759           and HIGH ORDER =   87250.2326383147     
+  K factor ABFS NLL/BORN    4.04608959772934     
+  in abfs YMAX   7.10446489848261     
+  in abfs y is    0.00000000000000     
+   ****** Pt    5.75000000000000       GeV/c  SIGTOT NLL    380293.110423233     
+  including   BORN =   98791.0632287427           ANOMA =   218451.896138625           and HIGH ORDER =   63050.1510558654     
+  K factor ABFS NLL/BORN    3.84946874741793     
+  in abfs YMAX   7.02108316709431     
+  in abfs y is    0.00000000000000     
+   ****** Pt    6.25000000000000       GeV/c  SIGTOT NLL    281061.811485467     
+  including   BORN =   76206.7229722367           ANOMA =   158183.496057955           and HIGH ORDER =   46671.5924552751     
+  K factor ABFS NLL/BORN    3.68814981832853     
+  in abfs YMAX   6.94412199330478     
+  in abfs y is    0.00000000000000     
+   ****** Pt    6.75000000000000       GeV/c  SIGTOT NLL    212007.127894904     
+  including   BORN =   59668.8827026866           ANOMA =   117111.454928497           and HIGH ORDER =   35226.7902637200     
+  K factor ABFS NLL/BORN    3.55306012601705     
+  in abfs YMAX   6.87266288646506     
+  in abfs y is    0.00000000000000     
+   ****** Pt    7.25000000000000       GeV/c  SIGTOT NLL    162849.047602917     
+  including   BORN =   47362.5869071494           ANOMA =   88415.9867449974           and HIGH ORDER =   27070.4739507701     
+  K factor ABFS NLL/BORN    3.43834782340267     
+  in abfs YMAX   6.80597135890463     
+  in abfs y is    0.00000000000000     
+   ****** Pt    7.75000000000000       GeV/c  SIGTOT NLL    127080.614798195     
+  including   BORN =   38054.6940002658           ANOMA =   67897.5809442272           and HIGH ORDER =   21128.3398537020     
+  K factor ABFS NLL/BORN    3.33942022493486     
+  in abfs YMAX   6.74345083865735     
+  in abfs y is    0.00000000000000     
+   ****** Pt    8.25000000000000       GeV/c  SIGTOT NLL    100553.305671744     
+  including   BORN =   30908.3615016771           ANOMA =   52925.3440406926           and HIGH ORDER =   16719.6001293745     
+  K factor ABFS NLL/BORN    3.25327195575502     
+  in abfs YMAX   6.68461016516427     
+  in abfs y is    0.00000000000000     
+   ****** Pt    8.75000000000000       GeV/c  SIGTOT NLL    80547.8030729692     
+  including   BORN =   25351.7408790499           ANOMA =   41809.7211935521           and HIGH ORDER =   13386.3410003671     
+  K factor ABFS NLL/BORN    3.17720993825446     
+  in abfs YMAX   6.60237178758913     
+  in abfs y is    0.00000000000000     
+   ****** Pt    9.50000000000000       GeV/c  SIGTOT NLL    58956.9493610973     
+  including   BORN =   19149.1803402183           ANOMA =   30014.2370704349           and HIGH ORDER =   9793.53195044420     
+  K factor ABFS NLL/BORN    3.07882365269037     
+  in abfs YMAX   6.49753729662804     
+  in abfs y is    0.00000000000000     
+   ****** Pt    10.5500000000000       GeV/c  SIGTOT NLL    39461.5117067211     
+  including   BORN =   13309.4642989962           ANOMA =   19600.5675588910           and HIGH ORDER =   6551.47984883381     
+  K factor ABFS NLL/BORN    2.96492111329358     
+  in abfs YMAX   6.41131569367773     
+  in abfs y is    0.00000000000000     
+   ****** Pt    11.5000000000000       GeV/c  SIGTOT NLL    28274.9006129914     
+  including   BORN =   9819.07437109806           ANOMA =   13766.2030754292           and HIGH ORDER =   4689.62316646406     
+  K factor ABFS NLL/BORN    2.87958921018228     

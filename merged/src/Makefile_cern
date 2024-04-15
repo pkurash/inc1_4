@@ -1,0 +1,60 @@
+#
+#   Makefile for GNUmake (use gmake sur HP)
+#
+
+
+FC = f77
+#FFLAGS = -c -qextname
+FFLAGS = -qextname
+LINKER = $(FC)
+#LDFLAGS = -C -qextname
+LDFLAGS= -qextname
+
+
+GRACELDIR     = ../../bases/lib
+BASESLIB      = bases
+
+LIB1_PATH     = ../../pholib/lib
+LIB1          = pho
+LIB3_PATH     = ../../hadlib/lib
+LIB3          = had
+LIB4_PATH     = ../../alfas/lib
+LIB4          = alfas
+LIB5_PATH     = ../../frag/bfg_photon/lib
+LIB5          = bfg_photon
+#LIB6_PATH     = ../../frag/bkk_hadron/lib
+#LIB6          = bkk_hadron
+LIB6_PATH     = ../../frag/hadron/lib
+LIB6          = fra_hadron
+ 
+LIB = -L/cern/pro/lib
+LIBS = -lpdflib804  -lpacklib  -lmathlib -lkernlib
+
+.SUFFIXES:	.f.o
+
+.f.o:		
+	$(FC) $(FFLAGS) -c $*.f
+	
+
+
+OBJS=	inclnll.o param.o initone.o onestru.o onefra.o \
+	abfs.o pioincl.o fonfra.o\
+	fonstru.o charnum_.o 
+	
+executable = inclnll
+
+#-----------------
+
+all :	$(OBJS)
+	$(FC) $(FFLAGS) -o $(executable) $(OBJS) \
+	-L$(LIB1_PATH) -l$(LIB1) \
+        -L$(LIB3_PATH) -l$(LIB3) \
+	-L$(LIB4_PATH) -l$(LIB4) \
+	-L$(LIB5_PATH) -l$(LIB5) \
+	-L$(LIB6_PATH) -l$(LIB6) \
+	-L$(GRACELDIR) -l$(BASESLIB) $(LIB) $(LIBS)
+	
+
+ 
+
+

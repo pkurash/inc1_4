@@ -1,0 +1,236 @@
+*******************hadlib***********************
+	IMPLICIT REAL*8 (A-H,L-Z)
+
+hadlib.f:
+	COMMON/HASCALE/M,MP,MU
+	COMMON/ORDE/IFLAG,ICHOI,AL,CQ,V1,V2,V3,V4
+	COMMON/CONS/PI,GS,GV,GW,N,GTR,CF,PT2,VC
+        COMMON/EDF/J0
+	COMMON/FCTD/GPPT,GPPC
+cdel.f 	
+	COMMON/VALU/JMAR,IPT
+	COMMON/ALFA/MASCH2,MASBO2,MASTO2,LAMBDA2
+	COMMON/FACT/ZQ
+        COMMON/FCTC/GPPT,GPPC
+	COMMON/FCTD/GRRT,GRRC
+    	COMMON/YRANGE/YMIN,YMAX
+        COMMON/PTVALUE/PT
+        COMMON/YVALUE/RAPIDITE
+        common/INTCHOIX/integy
+        COMMON/CONS/PI,GS,GV,GW,N,GTR,CF,PT2,VC
+        COMMON/HASCALE/M,MP,MU
+        COMMON/ORDE/IFLAG,ICHOI,AL,CQ,V1,V2,V3,V4
+        COMMON/EDF/J0
+        COMMON/HADR/IH1,IH2
+        COMMON/FCTD/GRRT,GRRC
+stru.f  
+        COMMON/PION/IPION
+*******************pholib******************************
+      implicit real*8(a-h,o-z)
+
+ 	COMMON/FACTO/FQP,FQQ,FGQ,FQG,FGG,DPQ,DQQ,DGQ,DQG,DGG
+        COMMON/PHOSCALE/Q1S,Q2S,QDS,Q0S,ALBD,ALBD2,XLG0
+	COMMON/KINE/S,RS,PT,PT2,Y,VV,WW,XX1,XX2,XX1M
+	COMMON/CHARGE/Q(8)
+	COMMON/VARI/V1,V2,W1,VW,X1,X2,T1,T2,LV,LV1,LW,LW1,LX1,LX2,LR,LSQ,
+    1         LQC,LDQ,LLQ,LLQCH,ALFAS,ALFPI,GG1,GG2,QQ1(8),QQ2(8)
+      REAL*8 LV,LV1,LW,LW1,LX1,LX2,LR,LSQ,LQC,LDQ,LLQ,LLQCH
+        COMMON/COUPLI/AA
+        COMMON/PARTN1/QQ(7)	
+        COMMON/PARTN2/QQQ(7)
+	COMMON/ANOMAL/IANOM,IANORD
+	COMMON/X2ANOM/X2FRAG(8),X2G,DLQ,DLQCH
+opt.f	COMMON/OPT/ALQ2S
+opt.f    COMMON/IOPTI/IOPT
+        COMMON/OPTIM/AB,AC,BBORN,ANOMA,HIGOR
+kineps.f:	COMMON/W50511/NPTYPE,NGROUP,NSET,MODE,NFL,LO,TMAS
+kineps.f:      COMMON/PDFMOD/NPTYPRO,NGROPRO,NSETPRO,NPTYTAR,NGROTAR,
+       COMMON/CHARGE/Q(8)
+       COMMON/DREYAN/DYMIN,DYMAX,AMU,DYNOR1,DYNOR2,SIDEL4,R0
+       COMMON/DREYANI/IDY,ISOL
+******************alfas************************************
+         double precision masch2,masbo2,masto2,lambda4Square
+         common/alfa/masch2,masbo2,masto2,lambda4Square
+	 
+       double precision Lambda2(4:5)
+        common / AlphaS_Lambdas / Lambda2
+	
+ 	double precision b0(4:5), b1(4:5)
+        common / AlphaS_betaCoeffs / b0, b1
+
+      double precision M2bottom
+        common / AlphaS_mass2 / M2bottom
+*************************merged********************************
+abfs.f
+	common/output_units/io,ier,itest
+  initialized in param.f
+  
+	common/choics/facin
+initialized in pioincl and abfs.f following isigm in common/xsect/
+
+       common/scale_choice/cc1,cc2,ccd
+initialized in initone.f cc1 may be changed in abfs.f to allow a
+scale q1s of at least 2.01
+
+ 	common/constants/cn
+initialized in initone.f
+
+	COMMON/XSECT/ISIGM,ILOOP,IHIOR
+read in param.f
+
+	      COMMON/INTEGPREC/NVINT,NWINT,NY2
+initialized in param.f
+
+	      COMMON/DATA/IPROJ(20),SIGEX(20),ERREX(20),CORAP(20)
+corap initialized in abfs.f
+
+abfs.f:      COMMON/BLANKO/BE1(20,20),BE2(20,20),BE12(20,20),BJ1(20,20)...
+internal common
+
+abfs.f:      COMMON/FACTO/FQP,FQQ,FGQ,FQG,FGG,DPQ,DQQ,DGQ,DQG,DGG
+internal pholib common
+
+abfs.f:      COMMON/PHOSCALE/Q1S,Q2S,QDS,Q0S,ALBD,ALBD2,XLG0
+q1s,q2s,qds set in abfs.f  following cc1,cc2,ccd in /scale_choice/ and pt
+for q1s, at least 2.01
+q0s,albd,albd2 set in onestru.f
+xlg0 internal
+
+abfs.f:      COMMON/KINE/S,RS,PT,PT2,Y,VV,WW,XX1,XX2,XX1M
+rs initialized in initone.f from zrs in /choi/
+pt initialized from xpt in /PROJEC/ in abfs.f
+y from xy(1) in /PROJEC/ in abfs.f
+
+
+abfs.f:      COMMON/DBOR/DBOR1,DBOR2,DBOR3,DBCH1,DBCH2,DBCH3,DBR1,DBR2,DBR3...
+internal
+
+
+conv.f:	COMMON/CONVI/ IORD,ICONV
+conv.f:	COMMON/CONV/ OWLAM,OWLAM2,RLAM,RLAM2,Q02PR,Q02PI
+iord set in param.f
+iconv set in initone.f following jmar reading in param
+owlam,owlam2,rlam,rlam2,q02pr,q02pi  in onestru following sf
+
+dreyan.f:      COMMON/DREYAN/DYMIN,DYMAX,AMU,DYNOR1,DYNOR2,SIDEL4,R0
+dreyan.f:      COMMON/DREYANI/IDY,ISOL
+
+fonfra.f:      COMMON/ANOMAL/IANOM,IANORD
+read in param.f 
+
+fonstru.f:	COMMON/NUCLEI/ZSURA
+
+inclnll.f:	COMMON/PTVALUE/PT
+inclnll.f:	COMMON/VALU/JMAR,IPT
+inclnll.f:	COMMON/EVOPT/PTEVO(19) 
+inclnll.f:	common/choics/facin
+inclnll.f:	common/phoord/lhior
+read in param.f
+inclnll.f:	COMMON/XSECT/ISIGM,ILOOP,IHIOR
+inclnll.f:	common/intchoix/lintegy
+inclnll.f:	common/yrange/ymin,ymax
+inclnll.f:	common/yvalue/rapidite
+inclnll.f:	common/output_units/io,ier,itest
+inclnll.f:        common/pion/ih3
+
+initone.f:c*** commons to handle both programs
+initone.f:	common/output_units/io,ier,itest
+initone.f:      COMMON/CHOI/HC2,ZRAP,ZRS,ZAL,CM,CMU,CMP
+initone.f:      COMMON/HADR/IH1,IH2
+initone.f:      COMMON/XSECT/ISIGM,ILOOP,IHIOR
+initone.f:      COMMON/YRANGE/YMIN,YMAX
+initone.f:      COMMON/INTCHOIX/lintegy
+initone.f:      COMMON/EVOPT/PTEVO(19)
+initone.f:      COMMON/PTVALUE/PTV
+initone.f:      COMMON/YVALUE/RAPIDITE
+initone.f:      COMMON/VALU/JMAR,IPT 
+initone.f:      COMMON/NUCLEI/ZSURA
+initone.f:	common/constants/cn
+initone.f:	common/scale_choice/cc1,cc2,ccd
+
+initone.f:      COMMON/KINE/S,RS,PT,PT2,Y,VV,WW,XX1,XX2,XX1M
+initone.f:      COMMON/INTEGPREC/NVINT,NWINT,NY2
+
+onefra.f:	COMMON/OUTPUT_UNITS/IO,IER,ITEST
+onefra.f:     	COMMON/ANOMAL/IANOM,IANORD
+onefra.f:        COMMON/PION/IH3
+onestru.f:	COMMON/OUTPUT_UNITS/io,ier,itest
+onestru.f:        COMMON/ALFA/MASCH2,MASBO2,MASTO2,LAMBDA2
+
+
+
+opt.f:        COMMON/OPT/ALQ2S
+opt.f:        COMMON/IOPTI/IOPT
+
+param.f:       COMMON/OUTPUT_UNITS/IO,IER,ITEST  
+param.f:       COMMON/ANOMAL/IANOM,IANORD
+param.f:       COMMON/phoord/lhior 
+param.f:       COMMON/EVOPT/PTEVO(19)
+param.f:       COMMON/CONS/PIC,GS,GV,GW,N,GTR,CFC,PT2,VC
+param.f:      COMMON/VALU/JMAR,IPT
+param.f:      COMMON/PTVALUE/PT
+param.f:      COMMON/HADR/IH1,IH2 
+param.f:      COMMON/XSECT/ISIGM,ILOOP,IHIOR
+param.f:      COMMON/CHOI/HC2,ZRAP,RS,ZAL,CM,CMU,CMP
+param.f:      COMMON/ALFA/MASCH2,MASBO2,MASTO2,LAMBDA2
+
+param.f:      COMMON/YRANGE/YMIN,YMAX
+param.f:      COMMON/NUCLEI/ZSURA
+param.f:      COMMON/EXPERIENCE/IEXP 
+param.f:      common/INTCHOIX/lintegy
+param.f:      common/baseio/lu
+param.f:      COMMON/INTEGPREC/NVINT,NWINT,NY2
+param.f:      common/pion/ih3
+param.f:	common/name/name_experiment
+param.f:	common/lname/ilname
+
+
+pdfchoix.f:      COMMON/PDFCHOIX/LMRS98,LMRS99,LCTEQ5M,LPDFLIB,LGRID
+pdfmod.f:      COMMON/PDFMOD/NPTYPRO,NGROPRO,NSETPRO,NPTYTAR,NGROTAR,NSETTAR
+
+
+pioincl.f:      COMMON/PION/IPION
+pioincl.f:      COMMON/CONS/PI,GS,GV,GW,N,GTR,CF,PT2,VC
+pioincl.f:      COMMON/HASCALE/M,MP,MU
+set in pioincl following cm,cmu,cmp in common/CHOI/ and PT in common/PTVALUE/ where 
+   m,  mu and mp are at least sqrt(2.1)
+   
+pioincl.f:      COMMON/ORDE/IFLAG,ICHOI,AL,CQ,V1,V2,V3,V4
+pioincl.f:      COMMON/FACT/ZQ
+pioincl.f:      COMMON/YRANGE/YMIN,YMAX
+pioincl.f:      COMMON/PTVALUE/PT
+pioincl.f:      common/output_units/io,ier,itest
+pioincl.f:      COMMON/EVOPT/PTEVO(19)
+pioincl.f:      COMMON/VALU/JMAR,IPT
+pioincl.f:      COMMON/XSECT/ISIGM,ILOOP,IHIOR
+pioincl.f:      COMMON/CHOI/HC2,ZRAP,ZRS,ZAL,CM,CMU,CMP
+hc2,cm,cmu,cmp read in param.f
+zrs in param.f 
+
+pioincl.f:      COMMON/ALFA/MASCH2,MASBO2,MASTO2,LAMBDA2
+masch2,masbo2,masto2 initialized in param.f following reading of jnf
+number of flavors
+lambda2 set in initone.f following sf
+
+pioincl.f:      COMMON/EXPERIENCE/IEXP
+pioincl.f:      common/INTCHOIX/integy
+pioincl.f:      common/baprecision/accu,jtmx1,jtmx2,jcall1,jcall2,jcall3
+set in param.f
+pioincl.f:	COMMON/BPARM1/XL(50),XU(50),IDIM,IWILD,IG(50),ICALL
+pioincl.f:	COMMON/BPARM2/ACC1,ACC2,ITMX1,ITMX2
+
+projec.f:      COMMON/PROJEC/ZCIB,ACIB,ZPRO.APRO,
+		XPT(20),XY(20),YINF,YSUP,XINF,XSUP
+projec.f:      COMMON/PROJECI/IPRO,ISTRUC,IPT1,IPT2,JY1,JY2,INTEGY,IXBOND
+acib and zcib read in param.f
+ZPRO.APRO read in param.f
+xpt in initone from ptevo; xy(1) in initone from ymin,ymax
+; ipro in initone; istruc in initone
+
+qcd.f:        COMMON/QCD/CF,NC,RNF,ALFA,ALFA2,PI,PI2,B0,B0INV,B1
+qcd.f:        COMMON/QCDIN/NF
+
+
+
+
+

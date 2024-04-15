@@ -1,0 +1,39 @@
+ projectile 3
+  Z=  1.
+  A=  1.
+ NPTYPRO= 1
+ NGROPRO= 6
+ NSETPRO= 1
+ target 3
+  Z=  1.
+  A=  1.
+ NPTYTAR= 1
+ NGROTAR= 6
+ NSETTAR= 1
+ IH3= 0
+ LHIOR= 2
+ IHIOR= 2
+  iord  1
+  ianom= 2
+  ianord= 1
+ jnf= 4
+  isigm  2
+ hc2=  389350000.
+ iloop= 2
+ jmar= 2
+ ici= 0
+ ymax=  0.
+ ymin=  0.
+ lintegy  F
+ nb of pt points= 1
+  pt value   50.
+ rs =  5500.
+ ichoi_scale= 1
+ cm=  0.707
+ cmu=  0.707
+ cmp=  0.707
+  nucleon as projectile with Z  1. and A  1.
+  nucleon as target with Z  1. and A  1.
+ PT=   50.000   Y=    0.000   CC1=0.500E+00   Q1S=0.125E+04
+ AA=0.402E-01   SIGTOT=0.136E+00   SIG-BORN=0.644E-01   K-FACTOR=0.211E+01      .ANOMA.=0.440E-01   ANOMA/TOTAL =0.323E+00
+ 

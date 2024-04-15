@@ -1,0 +1,280 @@
+ 
+  STRUCTURE FUNCTIONS FROM PDFLIB
+  THE PROTON STRUCT FUNCT. ARE FROM THE PDFLIB TABLES: NGROUP =            4  NSET =           1
+  THE PROTON : LAMBDA=  0.326
+
+
+
+    PROJECTILE=proton    
+    TARGET=PROTON    
+ 
+  ORDER OF STR. FUN.=           1   CONVENTION OF STR. FUN.=           0
+  LAMBDA IN STR. FUN.=  0.326000005006790       GeV LAMBDA IN ALFAS=  0.326000005006790       GeV
+  Q02 VALUES : FOR PROTON Q02=   1.69000000000000      GeV^2  FOR PION=   1.69000000000000      GeV^2
+ 
+  ANOMALOUS PHOTON FRAGMENTATION FROM BOURHIS-GUILLET
+  SET II, LARGE GLUON
+   
+  Units for cross section (hbar*c)^2=   389350000.000000     
+  pb/GeV^2 when (hbar*c)^2 =0.38935D+09 
+  mb/GeV^2 when (hbar*c)^2 =0.38935D0 
+     cross section   DSIG/DY/DPT
+  at rapidity=   0.00000000000000     
+  Inclusive production of photon
+  ABFS NUMBER OF INTEGRATION POINTS : NVINT=          32    NWINT=          32
+ 
+  RENOR SCALE**2 =   0.250000000000000      *PT2 (cc2 is used)
+  FACTO SCALE**2 =   0.250000000000000      *PT2 (cc1 is used)
+ 
+  NUMBER OF OPEN FLAVORS=           4
+ 
+  CHARM INCLUDED IN STRUCTURE FUNCTIONS
+     square root of s=   200.000000000000      GeV        FQQ=   0.00000000000000              FQG=   0.00000000000000              DPQ=   0.00000000000000     
+  FACTO SCALE**2 IN FRAG =   0.250000000000000      *PT2 (ccd is used)
+  in abfs YMAX   4.89279600369319     
+  in abfs y is    0.00000000000000     
+  two programs anoma differ by   4354059.59902267     
+  check number of integration points
+  
+   ****** Pt    1.50000000000000       GeV/c  SIGTOT NLL    9042931.05123610     
+  including  NLL ABFS   2889100.52053451     
+     where  BORN =   1025980.15807368       and HIGH ORDER =   1863120.36246083     
+  and NLL fragmentation   6153830.53070159     
+     where BREMSS born =   2688702.87201461       and BREMSS high order =   3465127.65868698     
+  K factor  ABFS  NLL/BORN    2.81594190472350     
+  K factor  fragmentation  NLL/BORN    2.28877299710347     
+  K factor  NLL/(BORN+BREMSS)    2.43437487882275     
+  in abfs YMAX   4.38187034804007     
+  in abfs y is    0.00000000000000     
+  two programs anoma differ by   135451.833161839     
+  check number of integration points
+  
+   ****** Pt    2.50000000000000       GeV/c  SIGTOT NLL    1126473.19511548     
+  including  NLL ABFS   516823.049234693     
+     where  BORN =   220996.601466931       and HIGH ORDER =   295826.447767762     
+  and NLL fragmentation   609650.145880786     
+     where BREMSS born =   377021.596842885       and BREMSS high order =   232628.549037901     
+  K factor  ABFS  NLL/BORN    2.33860179660740     
+  K factor  fragmentation  NLL/BORN    1.61701650777009     
+  K factor  NLL/(BORN+BREMSS)    1.88367711601292     
+  in abfs YMAX   4.04524800727325     
+  in abfs y is    0.00000000000000     
+  two programs anoma differ by   1296.61954462317     
+  check number of integration points
+  
+   ****** Pt    3.50000000000000       GeV/c  SIGTOT NLL    219504.408794077     
+  including  NLL ABFS   126659.172009388     
+     where  BORN =   61518.2187409153       and HIGH ORDER =   65140.9532684731     
+  and NLL fragmentation   92845.2367846886     
+     where BREMSS born =   77243.4871848089       and BREMSS high order =   15601.7495998797     
+  K factor  ABFS  NLL/BORN    2.05888880727862     
+  K factor  fragmentation  NLL/BORN    1.20198142482293     
+  K factor  NLL/(BORN+BREMSS)    1.58188029852827     
+  in abfs YMAX   3.79373333490511     
+  in abfs y is    0.00000000000000     
+  two programs anoma differ by  -979.127996785791     
+  check number of integration points
+  
+   ****** Pt    4.50000000000000       GeV/c  SIGTOT NLL    63287.3724207623     
+  including  NLL ABFS   40788.2104472789     
+     where  BORN =   21703.0531743374       and HIGH ORDER =   19085.1572729415     
+  and NLL fragmentation   22499.1619734834     
+     where BREMSS born =   20051.8451010313       and BREMSS high order =   2447.31687245205     
+  K factor  ABFS  NLL/BORN    1.87937660750463     
+  K factor  fragmentation  NLL/BORN    1.12204946029262     
+  K factor  NLL/(BORN+BREMSS)    1.51568738123583     
+  in abfs YMAX   3.59281216499395     
+  in abfs y is    0.00000000000000     
+  two programs anoma differ by  -560.441419622870     
+  check number of integration points
+  
+   ****** Pt    5.50000000000000       GeV/c  SIGTOT NLL    23493.2056058213     
+  including  NLL ABFS   15974.8186548821     
+     where  BORN =   8994.97279979137       and HIGH ORDER =   6979.84585509076     
+  and NLL fragmentation   7518.38695093914     
+     where BREMSS born =   6761.73825026916       and BREMSS high order =   756.648700669981     
+  K factor  ABFS  NLL/BORN    1.77597186900361     
+  K factor  fragmentation  NLL/BORN    1.11190150707769     
+  K factor  NLL/(BORN+BREMSS)    1.49099679058537     
+  in abfs YMAX   3.42545726221136     
+  in abfs y is    0.00000000000000     
+  two programs anoma differ by  -295.700166998474     
+  check number of integration points
+  
+   ****** Pt    6.50000000000000       GeV/c  SIGTOT NLL    10217.0646501357     
+  including  NLL ABFS   7154.53951361115     
+     where  BORN =   4188.90900697156       and HIGH ORDER =   2965.63050663959     
+  and NLL fragmentation   3062.52513652459     
+     where BREMSS born =   2730.12425385490       and BREMSS high order =   332.400882669686     
+  K factor  ABFS  NLL/BORN    1.70797205231814     
+  K factor  fragmentation  NLL/BORN    1.12175302358504     
+  K factor  NLL/(BORN+BREMSS)    1.47666072195111     
+  in abfs YMAX   3.28200512039311     
+  in abfs y is    0.00000000000000     
+  two programs anoma differ by  -154.586756131263     
+  check number of integration points
+  
+   ****** Pt    7.50000000000000       GeV/c  SIGTOT NLL    4947.22559264763     
+  including  NLL ABFS   3535.30765547188     
+     where  BORN =   2130.44210925996       and HIGH ORDER =   1404.86554621192     
+  and NLL fragmentation   1411.91793717574     
+     where BREMSS born =   1244.65021872106       and BREMSS high order =   167.267718454679     
+  K factor  ABFS  NLL/BORN    1.65942441716941     
+  K factor  fragmentation  NLL/BORN    1.13438933761371     
+  K factor  NLL/(BORN+BREMSS)    1.46580452085204     
+  in abfs YMAX   3.15644003950634     
+  in abfs y is    0.00000000000000     
+  two programs anoma differ by  -86.0890255949282     
+  check number of integration points
+  
+   ****** Pt    8.50000000000000       GeV/c  SIGTOT NLL    2596.35944791580     
+  including  NLL ABFS   1880.52424601568     
+     where  BORN =   1158.60683748753       and HIGH ORDER =   721.917408528148     
+  and NLL fragmentation   715.835201900115     
+     where BREMSS born =   621.690194857191       and BREMSS high order =   94.1450070429231     
+  K factor  ABFS  NLL/BORN    1.62309092711177     
+  K factor  fragmentation  NLL/BORN    1.15143395829904     
+  K factor  NLL/(BORN+BREMSS)    1.45838553946039     
+  in abfs YMAX   3.04476164343117     
+  in abfs y is    0.00000000000000     
+  two programs anoma differ by  -49.3491473771348     
+  check number of integration points
+  
+   ****** Pt    9.50000000000000       GeV/c  SIGTOT NLL    1447.83126738970     
+  including  NLL ABFS   1059.43810525710     
+     where  BORN =   664.206303082157       and HIGH ORDER =   395.231802174940     
+  and NLL fragmentation   388.393162132605     
+     where BREMSS born =   332.565249031276       and BREMSS high order =   55.8279131013295     
+  K factor  ABFS  NLL/BORN    1.59504373918302     
+  K factor  fragmentation  NLL/BORN    1.16787055551940     
+  K factor  NLL/(BORN+BREMSS)    1.45252065462733     
+  in abfs YMAX   2.94417439370778     
+  in abfs y is    0.00000000000000     
+  two programs anoma differ by  -28.8930709543916     
+  check number of integration points
+  
+   ****** Pt    10.5000000000000       GeV/c  SIGTOT NLL    846.764197430852     
+  including  NLL ABFS   624.803087499009     
+     where  BORN =   397.258905441655       and HIGH ORDER =   227.544182057354     
+  and NLL fragmentation   221.961109931843     
+     where BREMSS born =   187.273670661590       and BREMSS high order =   34.6874392702531     
+  K factor  ABFS  NLL/BORN    1.57278560389824     
+  K factor  fragmentation  NLL/BORN    1.18522325721342     
+  K factor  NLL/(BORN+BREMSS)    1.44861763406885     
+  in abfs YMAX   2.85264756271770     
+  in abfs y is    0.00000000000000     
+  two programs anoma differ by  -17.8333594696748     
+  check number of integration points
+  
+   ****** Pt    11.5000000000000       GeV/c  SIGTOT NLL    515.215310115935     
+  including  NLL ABFS   382.517953040835     
+     where  BORN =   246.008721594648       and HIGH ORDER =   136.509231446187     
+  and NLL fragmentation   132.697357075101     
+     where BREMSS born =   110.421915066838       and BREMSS high order =   22.2754420082624     
+  K factor  ABFS  NLL/BORN    1.55489590190674     
+  K factor  fragmentation  NLL/BORN    1.20173026337008     
+  K factor  NLL/(BORN+BREMSS)    1.44548548054597     
+  in abfs YMAX   2.76865938331357     
+  in abfs y is    0.00000000000000     
+  two programs anoma differ by  -11.0459636972932     
+  check number of integration points
+  
+   ****** Pt    12.5000000000000       GeV/c  SIGTOT NLL    323.413356291581     
+  including  NLL ABFS   241.553964222478     
+     where  BORN =   156.817771951473       and HIGH ORDER =   84.7361922710053     
+  and NLL fragmentation   81.8593920691029     
+     where BREMSS born =   67.1699712890085       and BREMSS high order =   14.6894207800944     
+  K factor  ABFS  NLL/BORN    1.54034814559938     
+  K factor  fragmentation  NLL/BORN    1.21869029416272     
+  K factor  NLL/(BORN+BREMSS)    1.44388863253269     
+  in abfs YMAX   2.69103997287794     
+  in abfs y is    0.00000000000000     
+  two programs anoma differ by  -7.16281681372974     
+  check number of integration points
+  
+   ****** Pt    13.5000000000000       GeV/c  SIGTOT NLL    208.720701198855     
+  including  NLL ABFS   156.575839854819     
+     where  BORN =   102.440118022034       and HIGH ORDER =   54.1357218327846     
+  and NLL fragmentation   52.1448613440363     
+     where BREMSS born =   42.2232883892946       and BREMSS high order =   9.92157295474164     
+  K factor  ABFS  NLL/BORN    1.52846211892435     
+  K factor  fragmentation  NLL/BORN    1.23497868908896     
+  K factor  NLL/(BORN+BREMSS)    1.44280233942085     
+  in abfs YMAX   2.61887053402519     
+  in abfs y is    0.00000000000000     
+  two programs anoma differ by  -4.69323007420658     
+  check number of integration points
+  
+   ****** Pt    14.5000000000000       GeV/c  SIGTOT NLL    137.778219406803     
+  including  NLL ABFS   103.778043045364     
+     where  BORN =   68.3328688389430       and HIGH ORDER =   35.4451742064209     
+  and NLL fragmentation   34.0001763614394     
+     where BREMSS born =   27.1575301689597       and BREMSS high order =   6.84264619247977     
+  K factor  ABFS  NLL/BORN    1.51871339237876     
+  K factor  fragmentation  NLL/BORN    1.25196128476737     
+  K factor  NLL/(BORN+BREMSS)    1.44284892343366     
+  in abfs YMAX   2.55141624622391     
+  in abfs y is    0.00000000000000     
+  two programs anoma differ by  -3.18810774588451     
+  check number of integration points
+  
+   ****** Pt    15.5000000000000       GeV/c  SIGTOT NLL    92.7593781352468     
+  including  NLL ABFS   70.1018942259704     
+     where  BORN =   46.4067117732952       and HIGH ORDER =   23.6951824526752     
+  and NLL fragmentation   22.6574839092764     
+     where BREMSS born =   17.8712277341815       and BREMSS high order =   4.78625617509491     
+  K factor  ABFS  NLL/BORN    1.51059817744533     
+  K factor  fragmentation  NLL/BORN    1.26781910265406     
+  K factor  NLL/(BORN+BREMSS)    1.44309818961227     
+  in abfs YMAX   2.48808017793010     
+  in abfs y is    0.00000000000000     
+  two programs anoma differ by  -2.16047375754538     
+  check number of integration points
+  
+   ****** Pt    16.5000000000000       GeV/c  SIGTOT NLL    63.4929296762630     
+  including  NLL ABFS   48.1447578053821     
+     where  BORN =   32.0120211918554       and HIGH ORDER =   16.1327366135268     
+  and NLL fragmentation   15.3481718708809     
+     where BREMSS born =   11.9515939646691       and BREMSS high order =   3.39657790621177     
+  K factor  ABFS  NLL/BORN    1.50395870091550     
+  K factor  fragmentation  NLL/BORN    1.28419455314936     
+  K factor  NLL/(BORN+BREMSS)    1.44421539152793     
+  in abfs YMAX   2.37187843426582     
+  in abfs y is    0.00000000000000     
+  two programs anoma differ by  -1.03299460269843     
+  check number of integration points
+  
+   ****** Pt    18.5000000000000       GeV/c  SIGTOT NLL    31.0411517920517     
+  including  NLL ABFS   23.6751985020408     
+     where  BORN =   15.8449948046087       and HIGH ORDER =   7.83020369743214     
+  and NLL fragmentation   7.36595329001090     
+     where BREMSS born =   5.59135093076989       and BREMSS high order =   1.77460235924101     
+  K factor  ABFS  NLL/BORN    1.49417521393915     
+  K factor  fragmentation  NLL/BORN    1.31738346979353     
+  K factor  NLL/(BORN+BREMSS)    1.44806172540973     
+  in abfs YMAX   2.26721668288214     
+  in abfs y is    0.00000000000000     
+  two programs anoma differ by -0.539140992312002     
+  check number of integration points
+  
+   ****** Pt    20.5000000000000       GeV/c  SIGTOT NLL    15.9212908900394     
+  including  NLL ABFS   12.1795382097363     
+     where  BORN =   8.18449957819242       and HIGH ORDER =   3.99503863154390     
+  and NLL fragmentation   3.74175268030310     
+     where BREMSS born =   2.75992486214043       and BREMSS high order =  0.981827818162674     
+  K factor  ABFS  NLL/BORN    1.48812252885792     
+  K factor  fragmentation  NLL/BORN    1.35574440146216     
+  K factor  NLL/(BORN+BREMSS)    1.45473989763826     
+  in abfs YMAX   2.06343706889556     
+  in abfs y is    0.00000000000000     
+  two programs anoma differ by -0.135767994187029     
+  check number of integration points
+  
+   ****** Pt    25.0000000000000       GeV/c  SIGTOT NLL    3.97135007454621     
+  including  NLL ABFS   3.07418076615077     
+     where  BORN =   2.07082052256849       and HIGH ORDER =   1.00336024358228     
+  and NLL fragmentation  0.897169308395436     
+     where BREMSS born =  0.637099834450142       and BREMSS high order =  0.260069473945293     
+  K factor  ABFS  NLL/BORN    1.48452303453985     
+  K factor  fragmentation  NLL/BORN    1.40820835272976     
+  K factor  NLL/(BORN+BREMSS)    1.46656827046368     

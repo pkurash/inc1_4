@@ -1,0 +1,36 @@
+#
+# Makefile for library HADLIB
+#
+#
+FC	= gfortran
+FFLAGS	= -O
+SHELL         = /bin/csh
+AR		= /usr/bin/ar
+# for SUN.OS DEC
+#RANLIB		= /usr/bin/ranlib
+# for HP
+RANLIB		= /bin/ar ts
+#FC            = f77
+#FFLAGS        = +ppu +z -K
+#
+LIBBASES      = libhad.a
+LIBDIR =../lib/.
+#
+SRCS	= cdel.f hadlib.f stru.f
+
+
+OBJS	= cdel.o hadlib.o stru.o
+
+all:	${LIBBASES}
+
+${LIBBASES}:	${OBJS}
+	${AR} rc ${LIBBASES} $?
+
+tags:${SRCS}
+	${FTAGS} ${SRCS}
+
+install: all
+	cp ${LIBBASES} ${LIBDIR}
+
+clean:
+		rm -f ${LIBBASES} ${OBJS} core

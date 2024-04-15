@@ -1,0 +1,50 @@
+
+                                                       Date: **/ 2/19  11:55
+        **********************************************************
+        *                                                        *
+        *     BBBBBBB     AAAA     SSSSSS   EEEEEE   SSSSSS      *
+        *     BB    BB   AA  AA   SS    SS  EE      SS    SS     *
+        *     BB    BB  AA    AA  SS        EE      SS           *
+        *     BBBBBBB   AAAAAAAA   SSSSSS   EEEEEE   SSSSSS      *
+        *     BB    BB  AA    AA        SS  EE            SS     *
+        *     BB    BB  AA    AA  SS    SS  EE      SS    SS     *
+        *     BBBB BB   AA    AA   SSSSSS   EEEEEE   SSSSSS      *
+        *                                                        *
+        *                   BASES Version 5.1                    *
+        *           coded by S.Kawabata KEK, March 1994          *
+        **********************************************************
+
+
+     <<   Parameters for BASES    >>
+
+      (1) Dimensions of integration etc.
+          # of dimensions :    Ndim    =        2   ( 50 at max.)
+          # of Wilds      :    Nwild   =        2   ( 15 at max.)
+          # of sample points : Ncall   =      968(real)     1000(given)
+          # of subregions    : Ng      =       44 / variable
+          # of regions       : Nregion =       22 / variable
+          # of Hypercubes    : Ncube   =      484
+
+      (2) About the integration variables
+          ------+---------------+---------------+-------+-------
+              i       XL(i)           XU(i)       IG(i)   Wild
+          ------+---------------+---------------+-------+-------
+              1    0.000000E+00    1.000000E+00     1      yes
+              2    0.000000E+00    1.000000E+00     1      yes
+          ------+---------------+---------------+-------+-------
+
+      (3) Parameters for the grid optimization step
+          Max.# of iterations: ITMX1 =        5
+          Expected accuracy  : Acc1  =   1.0000 %
+
+      (4) Parameters for the integration step
+          Max.# of iterations: ITMX2 =        5
+          Expected accuracy  : Acc2  =   1.0000 %
+
+                                                       Date: **/ 2/19  11:55
+               Convergency Behavior for the Grid Optimization Step
+ ------------------------------------------------------------------------------
+ <- Result of  each iteration ->  <-     Cumulative Result     -> < CPU  time >
+  IT Eff R_Neg   Estimate  Acc %  Estimate(+- Error )order  Acc % ( H: M: Sec )
+ ------------------------------------------------------------------------------
+ Invalid Iset number in SetCtq6 :           0

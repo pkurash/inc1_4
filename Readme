@@ -1,0 +1,5 @@
+Working version of old INCNLO generator
+
+Requires newest version cernlib: https://cernlib.web.cern.ch/version.html
+
+TODO: implement most recent PDF-s (https://lhapdf.hepforge.org/pdfsets.html) in Fortan/C++

@@ -1,0 +1,31 @@
+To get results with mrs98 set-2, (which was ngroup 98 in previous versions),
+one can now use  pdflib804 with ngroup=3 and nset=68
+
+To get results with mrs99 set-2, (which was ngroup 99 in previous versions),
+one can now use  pdflib804 with ngroup=3 and nset=90
+
+For cteq5m (which was ngroup 100 in previous versions),
+one can also use pdflib804 with ngroup=4 and nset=48. Here though the results
+differ from previous versions as cteq5m was not implemented properly
+in previous versions. 
+
+To speed up, you can use cteq5 (cteq6) directly doing the following:
+...
+In directory merged/src, 
+Makefile_home_cteq5m (to be compared with default Makefile_home)
+drops pdflib804 and calls cteq5 (via the interface inter_cteq5.f).
+Therefore, working on  a linux pc, just replace Makefile_home by
+Makefile_home_cteq5m . Then go back to the main directory and
+do a make working. You should have the directory cteq5 with the cteq5 
+package at the same level as the directory inc1_4. 
+You can get it from http://www.phys.psu.edu/~cteq/
+
+For cteq6, you just need to replace Makefile_home by Makefile_home_cteq6m
+in the directory merged/src before doing a make file working
+from the directory inc1_4....
+
+In both these cases, the EKS corrections for nucleus are not activated
+as they come from pdflib804. 
+
+Other structure functions can be implemented by the user following
+inter_cteq6.f and Makefile_home_cteq6m.

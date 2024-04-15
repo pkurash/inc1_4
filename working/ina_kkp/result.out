@@ -1,0 +1,29 @@
+ 
+  STRUCTURE FUNCTIONS FROM PDFLIB
+  THE PROTON STRUCT FUNCT. ARE FROM THE PDFLIB TABLES: NGROUP =  3 NSET = 89
+  THE PROTON : LAMBDA=  0.300
+
+
+
+    PROJECTILE=nucleus   
+  with  Z=   79. A=   197.
+   cross sections are given per nucleon without corrections for nuclear effects
+    TARGET=NUCLEUS    with  Z=   79. A=   197.
+   cross sections are given per nucleon without corrections for nuclear effects
+ 
+  ORDER OF STR. FUN.= 1  CONVENTION OF STR. FUN.= 0
+  LAMBDA IN STR. FUN.=  0.3 GeV LAMBDA IN ALFAS=  0.3 GeV
+  Q02 VALUES : FOR PROTON Q02=  1.25GeV^2  FOR PION=  1.25GeV^2
+ 
+ PI0 FRAGMENTATION FROM KKP
+   
+  Units for cross section (hbar*c)^2=  0.38935
+  pb/GeV^2 when (hbar*c)^2 =0.38935D+09 
+  mb/GeV^2 when (hbar*c)^2 =0.38935D0 
+     cross section    E DSIG/D3P
+  averaged in rapidity from  -0.35 to   0.35
+  Inclusive production of pi^0
+  
+   ****** Pt   10. GeV/c  SIGTOT NLL   1.46361415E-07
+     where  BORN =  8.1340969E-08 and HIGH ORDER =  6.5020446E-08
+  K factor  fragmentation  NLL/BORN   1.79935667

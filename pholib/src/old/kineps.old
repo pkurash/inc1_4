@@ -1,0 +1,203 @@
+      SUBROUTINE KINEPS(V,W)
+      implicit real*8(a-h,o-z)
+      REAL*8 LV,LV1,LW,LW1,LX1,LX2,LR,LSQ,LQC,LDQ,LLQ,LLQCH
+	COMMON/W50511/NPTYPE,NGROUP,NSET,MODE,NFL,LO,TMAS
+	include "pdfmod.f"
+c      COMMON/PDFMOD/NPTYPRO,NGROPRO,NSETPRO,NPTYTAR,NGROTAR,
+c     * NSETTAR
+	COMMON/FACTO/FQP,FQQ,FGQ,FQG,FGG,DPQ,DQQ,DGQ,DQG,DGG
+	include "qcd.f"
+         include "phoscale.f"
+      COMMON/KINE/S,RS,PT,PT2,Y,VV,WW,XX1,XX2,XX1M
+      COMMON/VARI/V1,V2,W1,VW,X1,X2,T1,T2,LV,LV1,LW,LW1,LX1,LX2,LR,LSQ,
+     1         LQC,LDQ,LLQ,LLQCH,ALFAS,ALFPI,GG1,GG2,QQ1(8),QQ2(8)
+	include "dreyan.f"
+	include "projec.f"
+      COMMON/COUPLI/AA
+      COMMON/PARTN1/QQ(7)
+      COMMON/PARTN2/QQQ(7)
+      COMMON/ANOMAL/IANOM,IANORD
+      COMMON/X2ANOM/X2FRAG(8),X2G,DLQ,DLQCH
+C	forces interstru
+      it=1
+c
+      ALFMIN=2.*PI/ALFA
+c
+      V1 = 1.D0-V
+      V2 = 2.D0-V
+      W1 = 1.D0-W
+      VW = V * W
+      X1 = 1.D0-V*W
+      X2 = 1.D0-V+V*W
+      T1 = XX1 /VW
+      T2 = XX2 /V1
+      SHAT = PT2/(V1*V*W)
+      LDQ  =0.D0
+      LLQ= LOG(SHAT/0.04D0)
+      IF (W.NE.1.D0) THEN
+c           LDQ=-2.*LX2-LOG(1.-X2)
+      ENDIF
+      IF(QDS.LT.1.D-9)  QDS  = SHAT
+      IF(QDS.GE.1.D-9)  LDQ  = LOG(SHAT/QDS)
+          LLQ= LLQ - LDQ
+          LLQCH=DMAX1(LOG(SHAT/2.0D0)-LDQ,0.D0)
+c
+c     define fragmentation logs for full inclusive cross sections
+      DLQ=LLQ
+      DLQCH=LLQCH
+c
+      IF(ISOL.EQ.0) THEN
+          IF(IDY.EQ.1.AND.W.NE.1.D0) THEN
+              LLQ=LOG(SHAT/(DYMIN**2*(1.D0-X2)))+DYNOR2/DYNOR1
+              LLQ= LLQ - LDQ
+              LLQCH=DMIN1(LLQCH,LLQ)
+          ENDIF
+      ENDIF
+c   define the log. factor associated to the accompanied photon
+      IF(ISOL.EQ.1.AND.W.NE.1.D0) THEN
+          YSTAR=0.5D0*LOG(T1/T2)
+          FAC=SHAT*(X2*(1.D0-X2)/(2.D0*COSH(YSTAR)/R0))**2
+          LLQ=LOG(FAC/.04D0)
+          LLQCH=DMAX1(LOG(FAC/2.0D0),0.D0)
+      ENDIF
+c
+c     call photon anomalous functions in case ianom=2
+      IF(IANOM.EQ.2) THEN
+           QP2=QDS
+           XD=X2
+           IPI=0
+c
+c  new fragmentation routines corrected by luc in february 1997
+c
+c           CALL  FONFRA(XD,IPI,QP2,XDGP,XDUP,XDDP,XDSP,XDCP,XDBP) 
+c             
+           CALL  FONFRA(XD,IPI,QP2,XDUP,XDUBP,XDDP,XDDBP,XDSP,XDCP
+     #                 ,XDBP,XDBBP,XDTP,XDTBP,XDGP)
+           X2FRAG(1)=XDUP*ALFMIN
+           X2FRAG(2)=XDDP*ALFMIN
+           X2FRAG(3)=XDSP*ALFMIN
+           X2FRAG(7)=XDCP*ALFMIN
+           X2G=XDGP
+           X2FRAG(4)=X2FRAG(1)
+           X2FRAG(5)=X2FRAG(2)
+           X2FRAG(6)=X2FRAG(3)
+           X2FRAG(8)=X2FRAG(7)
+      ENDIF
+c     end of photon anomalous functions in case ianom=2
+c
+      ALFAS=AA*PI
+      ALFPI=AA*0.5D0     
+      if(it.eq.1) then
+      call interstru
+      return
+      endif
+      RQ1S=SQRT(Q1S)
+c
+c  call the structure function tables of the proton or the pion
+c  to fill the arrays qq, qqq:
+c  qq(1)=xu, qq(2)=xd,qq(3)=xsea,qq(4)=xstrange,qq(5)=xcharm,qq(7)=xglu
+c
+      IF(ISTRUC.EQ.3) THEN
+          NPTYPE=NPTYPRO
+          NGROUP=NGROPRO
+          NSET=NSETPRO
+c          CALL STRUCTF(T1,RQ1S,UPV,DNV,SEA,STR,CHM,BOT,TOP,GLU)	
+	CALL STRUCTM(T1,RQ1S,UPV,DNV,USEA,DSEA,STR,CHM,BOT,TOP,GLU)
+          QQ(1)=UPV+USEA
+          QQ(2)=DNV+DSEA
+          QQ(3)=SEA
+          QQ(4)=STR
+          QQ(5)=CHM
+          QQ(7)=GLU
+          NPTYPE=NPTYTAR
+          NGROUP=NGROTAR
+          NEST=NSETTAR
+c          CALL STRUCTF(T2,RQ1S,UPV2,DNV2,SEA2,STR2,CHM2,BOT2,
+c     1                 TOP2,GLU2)
+          CALL STRUCTM(T2,RQ1S,UPV2,DNV2,USEA2,DSEA2,STR2,
+     1                 CHM2,BOT2,TOP2,GLU2)
+          QQQ(1)=UPV2+USEA2
+          QQQ(2)=DNV2+DSEA2
+          QQQ(3)=SEA2
+          QQQ(4)=STR2
+          QQQ(5)=CHM2
+          QQQ(7)=GLU2
+c
+c     direct parton definition for proton beam and target
+c
+c     qq1(1)=-qq(1) + qq(3)
+c     qq1(2)=-qq(2) + qq(3)
+c     qq1(3)=0.
+c     qq1(4)= qq(1) - qq(3)
+c     qq1(5)= qq(2) - qq(3)
+c     qq1(6)=0.
+c     qq1(7)=0.
+c     qq1(8)=0.
+c     gg1=0.
+c
+C     QQ2(1)=QQQ(1)
+C     QQ2(2)=QQQ(2)
+C     QQ2(3)=QQQ(4)
+C     QQ2(4)=QQQ(3)
+C     QQ2(5)=QQQ(3)
+C     QQ2(6)=QQQ(4)
+C     QQ2(7)=QQQ(5)
+C     QQ2(8)=QQQ(5)
+C     GG2=QQQ(7)
+c     return
+      ENDIF
+c
+c*********MRS98/MRS99 package******
+      if(istruc.eq.1.or.istruc.eq.2) then
+      mopr=mmrs98
+      if(istruc.eq.1) then
+c      call mrs99(t1,rq1s,mopr,upva,dnva,seau,sead,stra,
+c     1            cham,boto,gluo) 
+      elseif (istruc.eq.2) then
+c      call mrs98(t1,rq1s,mopr,upva,dnva,seau,sead,stra,
+c     1            cham,boto,gluo) 
+      endif         
+          QQ(1)=UPVa+SEAu
+          QQ(2)=DNVa+SEAd
+          QQ(3)=(SEAu+SEAd)/2.
+          QQ(4)=STRa
+          QQ(5)=CHaM
+          QQ(7)=GLUo 
+	  if(istruc.eq.1) then 
+c      call mrs99(t2,rq1s,mopr,upva,dnva,seau,sead,stra,
+c     1           cham,boto,gluo)
+          elseif(istruc.eq.2) then
+c	call mrs98(t1,rq1s,mopr,upva,dnva,seau,sead,stra,
+c     1            cham,boto,gluo) 
+	  endif
+          QQQ(1)=UPVa+SEAu
+          QQQ(2)=DNVa+SEAd
+          QQQ(3)=(SEAu+SEAd)/2.
+          QQQ(4)=STRa
+          QQQ(5)=CHaM
+          QQQ(7)=GLUo           
+	endif
+	
+C      IF(ISTRUC.EQ.5) CALL AEMDST(T1,Q1S,QQ,1)
+C      IF(ISTRUC.EQ.5) CALL AEMDST(T2,Q1S,QQQ,2)
+c
+c  call the subroutines which calculate distributions for various
+c  combinations of beams and various targets
+c
+C      IF(ISTRUC.EQ.5) CALL AEMDST(T1,Q1S,QQ,1)
+C      IF(ISTRUC.EQ.5) CALL AEMDST(T2,Q1S,QQQ,2)
+      cALL INTERSTRU
+c      GG1=XG1(T1)
+c      GG2=XG2(T2)
+c      DO 10 I=1,6
+c      QQ1(I)=XQ1(T1,I)
+c      QQ2(I)=XQ2(T2,I)
+c10    CONTINUE
+c      QQ1(7)=XQC1(T1)
+c      QQ1(8)=QQ1(7)
+c      QQ2(7)=XQC2(T2)
+c      QQ2(8)=QQ2(7)
+C     PRINT*,' X=',T1,' Q2=',Q1S,' XG1=',GG1,' XU=',QQ1(1),
+C    1 ' XD=',QQ1(2),' XSEA=',QQ1(3)
+      RETURN
+      END

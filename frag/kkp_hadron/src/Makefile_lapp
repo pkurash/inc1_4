@@ -1,0 +1,36 @@
+#
+# Makefile for library FRAGMENTATION
+#
+#
+FC	= f77
+FFLAGS	= -O
+SHELL         = /bin/csh
+AR		= /usr/bin/ar
+# for SUN.OS DEC
+#RANLIB		= /usr/bin/ranlib
+# for HP
+RANLIB		= /bin/ar ts
+#FC            = f77
+#FFLAGS        = +ppu +z -K
+#
+LIBBASES      = libkkp_hadron.a
+LIBDIR=../lib/.
+#
+SRCS	= kkp.f
+
+
+OBJS	=  kkp.o
+
+all:	${LIBBASES}
+
+${LIBBASES}:	${OBJS}
+	${AR} rc ${LIBBASES} $?
+
+tags:${SRCS}
+	${FTAGS} ${SRCS}
+
+install: all
+	cp ${LIBBASES} ${LIBDIR}
+
+clean:
+		rm -f ${LIBBASES} ${OBJS} core

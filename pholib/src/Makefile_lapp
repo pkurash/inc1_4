@@ -1,0 +1,42 @@
+#
+# Makefile for library PHOLIB
+#
+#
+FC	= f77
+FFLAGS	= -O
+SHELL         = /bin/csh
+AR		= /usr/bin/ar
+# for SUN.OS DEC
+#RANLIB		= /usr/bin/ranlib
+# for HP
+RANLIB		= /bin/ar ts
+#FC            = f77
+#FFLAGS        = +ppu +z -K
+#
+LIBBASES      = libpho.a
+LIBDIR =../lib/.
+#
+SRCS	= ali.f opti.f steve.f anom.f anogl.f \
+kinem.f kineps.f fququb.f fchchb.f fgluqu.f fgluch.f \
+fbor1.f fbch1.f fbor2.f fbch2.f fbor3.f fbch3.f \
+interstru.f photcms_dou.f 
+
+
+OBJS	= ali.o opti.o steve.o anom.o anogl.o \
+kinem.o kineps.o fququb.o fchchb.o fgluqu.o fgluch.o \
+fbor1.o fbch1.o fbor2.o fbch2.o fbor3.o fbch3.o \
+interstru.o photcms_dou.o
+
+all:	${LIBBASES}
+
+${LIBBASES}:	${OBJS}
+	${AR} rc ${LIBBASES} $?
+
+tags:${SRCS}
+	${FTAGS} ${SRCS}
+
+install: all
+	cp ${LIBBASES} ${LIBDIR}
+
+clean:
+		rm -f ${LIBBASES} ${OBJS} core

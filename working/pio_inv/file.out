@@ -1,0 +1,247 @@
+  
+  *****  CERN Computer Program Library     -     Reference:  W5051  *****
+  *****  PDFLIB Version:  8.04  Released on  2000-04-17  at  12.24  *****
+
+                                                       Date: **/11/19  23:36
+        **********************************************************
+        *                                                        *
+        *     BBBBBBB     AAAA     SSSSSS   EEEEEE   SSSSSS      *
+        *     BB    BB   AA  AA   SS    SS  EE      SS    SS     *
+        *     BB    BB  AA    AA  SS        EE      SS           *
+        *     BBBBBBB   AAAAAAAA   SSSSSS   EEEEEE   SSSSSS      *
+        *     BB    BB  AA    AA        SS  EE            SS     *
+        *     BB    BB  AA    AA  SS    SS  EE      SS    SS     *
+        *     BBBB BB   AA    AA   SSSSSS   EEEEEE   SSSSSS      *
+        *                                                        *
+        *                   BASES Version 5.1                    *
+        *           coded by S.Kawabata KEK, March 1994          *
+        **********************************************************
+
+
+     <<   Parameters for BASES    >>
+
+      (1) Dimensions of integration etc.
+          # of dimensions :    Ndim    =        2   ( 50 at max.)
+          # of Wilds      :    Nwild   =        2   ( 15 at max.)
+          # of sample points : Ncall   =      968(real)     1000(given)
+          # of subregions    : Ng      =       44 / variable
+          # of regions       : Nregion =       22 / variable
+          # of Hypercubes    : Ncube   =      484
+
+      (2) About the integration variables
+          ------+---------------+---------------+-------+-------
+              i       XL(i)           XU(i)       IG(i)   Wild
+          ------+---------------+---------------+-------+-------
+              1    0.000000E+00    1.000000E+00     1      yes
+              2    0.000000E+00    1.000000E+00     1      yes
+          ------+---------------+---------------+-------+-------
+
+      (3) Parameters for the grid optimization step
+          Max.# of iterations: ITMX1 =        5
+          Expected accuracy  : Acc1  =   1.0000 %
+
+      (4) Parameters for the integration step
+          Max.# of iterations: ITMX2 =        5
+          Expected accuracy  : Acc2  =   1.0000 %
+
+                                                       Date: **/11/19  23:36
+               Convergency Behavior for the Grid Optimization Step
+ ------------------------------------------------------------------------------
+ <- Result of  each iteration ->  <-     Cumulative Result     -> < CPU  time >
+  IT Eff R_Neg   Estimate  Acc %  Estimate(+- Error )order  Acc % ( H: M: Sec )
+ ------------------------------------------------------------------------------
+  
+  
+  Nucleon PDFs :  MRST higher-g (L300-MSb) Structure Functions
+                  Ngroup =  3,   Nset =  68
+  --------------------------------------------------------------------------------------
+   1 100  0.00  4.960E-03  1.933  4.959896(+-0.095868)E-03  1.933   0: 0: 0.15
+   2 100  0.00  4.917E-03  0.541  4.920316(+-0.025644)E-03  0.521   0: 0: 0.30
+ ------------------------------------------------------------------------------
+
+                                                       Date: **/11/19  23:36
+               Convergency Behavior for the Integration Step      
+ ------------------------------------------------------------------------------
+ <- Result of  each iteration ->  <-     Cumulative Result     -> < CPU  time >
+  IT Eff R_Neg   Estimate  Acc %  Estimate(+- Error )order  Acc % ( H: M: Sec )
+ ------------------------------------------------------------------------------
+   1 100  0.00  4.895E-03  0.523  4.894793(+-0.025577)E-03  0.523   0: 0: 0.43
+ ------------------------------------------------------------------------------
+
+                    ****** END OF BASES *********
+
+
+     <<   Computing Time Information   >>
+
+               (1) For BASES              H: M:  Sec
+                   Overhead           :   0: 0: 0.00
+                   Grid Optim. Step   :   0: 0: 0.30
+                   Integration Step   :   0: 0: 0.13
+                   Go time for all    :   0: 0: 0.43
+
+               (2) Expected event generation time
+                   Expected time for 1000 events :      0.21 Sec
+
+                                                       Date: **/11/19  23:36
+        **********************************************************
+        *                                                        *
+        *     BBBBBBB     AAAA     SSSSSS   EEEEEE   SSSSSS      *
+        *     BB    BB   AA  AA   SS    SS  EE      SS    SS     *
+        *     BB    BB  AA    AA  SS        EE      SS           *
+        *     BBBBBBB   AAAAAAAA   SSSSSS   EEEEEE   SSSSSS      *
+        *     BB    BB  AA    AA        SS  EE            SS     *
+        *     BB    BB  AA    AA  SS    SS  EE      SS    SS     *
+        *     BBBB BB   AA    AA   SSSSSS   EEEEEE   SSSSSS      *
+        *                                                        *
+        *                   BASES Version 5.1                    *
+        *           coded by S.Kawabata KEK, March 1994          *
+        **********************************************************
+
+
+     <<   Parameters for BASES    >>
+
+      (1) Dimensions of integration etc.
+          # of dimensions :    Ndim    =        2   ( 50 at max.)
+          # of Wilds      :    Nwild   =        2   ( 15 at max.)
+          # of sample points : Ncall   =     1875(real)     2000(given)
+          # of subregions    : Ng      =       50 / variable
+          # of regions       : Nregion =       25 / variable
+          # of Hypercubes    : Ncube   =      625
+
+      (2) About the integration variables
+          ------+---------------+---------------+-------+-------
+              i       XL(i)           XU(i)       IG(i)   Wild
+          ------+---------------+---------------+-------+-------
+              1    0.000000E+00    1.000000E+00     1      yes
+              2    0.000000E+00    1.000000E+00     1      yes
+          ------+---------------+---------------+-------+-------
+
+      (3) Parameters for the grid optimization step
+          Max.# of iterations: ITMX1 =        5
+          Expected accuracy  : Acc1  =   1.0000 %
+
+      (4) Parameters for the integration step
+          Max.# of iterations: ITMX2 =        5
+          Expected accuracy  : Acc2  =   1.0000 %
+
+                                                       Date: **/11/19  23:36
+               Convergency Behavior for the Grid Optimization Step
+ ------------------------------------------------------------------------------
+ <- Result of  each iteration ->  <-     Cumulative Result     -> < CPU  time >
+  IT Eff R_Neg   Estimate  Acc %  Estimate(+- Error )order  Acc % ( H: M: Sec )
+ ------------------------------------------------------------------------------
+ ******* WARNING FROM BASES *******************
+ *  Negative FUNCTION at IT =  1 , node =   0 *
+ **********************************************
+   1 100  8.91  2.075E-03  4.051  2.075260(+-0.084069)E-03  4.051   0: 0: 1.40
+   2 100 10.35  2.120E-03  0.675  2.118932(+-0.014109)E-03  0.666   0: 0: 2.80
+ ------------------------------------------------------------------------------
+
+                                                       Date: **/11/19  23:36
+               Convergency Behavior for the Integration Step      
+ ------------------------------------------------------------------------------
+ <- Result of  each iteration ->  <-     Cumulative Result     -> < CPU  time >
+  IT Eff R_Neg   Estimate  Acc %  Estimate(+- Error )order  Acc % ( H: M: Sec )
+ ------------------------------------------------------------------------------
+ ******* WARNING FROM BASES *******************
+ *  Negative FUNCTION at IT =  1 , node =   0 *
+ **********************************************
+   1 100 11.36  2.145E-03  0.579  2.145163(+-0.012414)E-03  0.579   0: 0: 4.21
+ ------------------------------------------------------------------------------
+
+                    ****** END OF BASES *********
+
+
+     <<   Computing Time Information   >>
+
+               (1) For BASES              H: M:  Sec
+                   Overhead           :   0: 0: 0.00
+                   Grid Optim. Step   :   0: 0: 2.80
+                   Integration Step   :   0: 0: 1.40
+                   Go time for all    :   0: 0: 4.21
+
+               (2) Expected event generation time
+                   Expected time for 1000 events :      1.07 Sec
+
+                                                       Date: **/11/19  23:36
+        **********************************************************
+        *                                                        *
+        *     BBBBBBB     AAAA     SSSSSS   EEEEEE   SSSSSS      *
+        *     BB    BB   AA  AA   SS    SS  EE      SS    SS     *
+        *     BB    BB  AA    AA  SS        EE      SS           *
+        *     BBBBBBB   AAAAAAAA   SSSSSS   EEEEEE   SSSSSS      *
+        *     BB    BB  AA    AA        SS  EE            SS     *
+        *     BB    BB  AA    AA  SS    SS  EE      SS    SS     *
+        *     BBBB BB   AA    AA   SSSSSS   EEEEEE   SSSSSS      *
+        *                                                        *
+        *                   BASES Version 5.1                    *
+        *           coded by S.Kawabata KEK, March 1994          *
+        **********************************************************
+
+
+     <<   Parameters for BASES    >>
+
+      (1) Dimensions of integration etc.
+          # of dimensions :    Ndim    =        3   ( 50 at max.)
+          # of Wilds      :    Nwild   =        3   ( 15 at max.)
+          # of sample points : Ncall   =     2662(real)     3000(given)
+          # of subregions    : Ng      =       44 / variable
+          # of regions       : Nregion =       11 / variable
+          # of Hypercubes    : Ncube   =     1331
+
+      (2) About the integration variables
+          ------+---------------+---------------+-------+-------
+              i       XL(i)           XU(i)       IG(i)   Wild
+          ------+---------------+---------------+-------+-------
+              1    0.000000E+00    1.000000E+00     1      yes
+              2    0.000000E+00    1.000000E+00     1      yes
+              3    0.000000E+00    1.000000E+00     1      yes
+          ------+---------------+---------------+-------+-------
+
+      (3) Parameters for the grid optimization step
+          Max.# of iterations: ITMX1 =        5
+          Expected accuracy  : Acc1  =   1.0000 %
+
+      (4) Parameters for the integration step
+          Max.# of iterations: ITMX2 =        5
+          Expected accuracy  : Acc2  =   1.0000 %
+
+                                                       Date: **/11/19  23:36
+               Convergency Behavior for the Grid Optimization Step
+ ------------------------------------------------------------------------------
+ <- Result of  each iteration ->  <-     Cumulative Result     -> < CPU  time >
+  IT Eff R_Neg   Estimate  Acc %  Estimate(+- Error )order  Acc % ( H: M: Sec )
+ ------------------------------------------------------------------------------
+ ******* WARNING FROM BASES *******************
+ *  Negative FUNCTION at IT =  1 , node =   0 *
+ **********************************************
+   1  99  1.80  2.302E-03  2.251  2.302051(+-0.051809)E-03  2.251   0: 0: 3.61
+   2 100  3.79  2.259E-03  1.009  2.266345(+-0.020865)E-03  0.921   0: 0: 7.16
+ ------------------------------------------------------------------------------
+
+                                                       Date: **/11/19  23:36
+               Convergency Behavior for the Integration Step      
+ ------------------------------------------------------------------------------
+ <- Result of  each iteration ->  <-     Cumulative Result     -> < CPU  time >
+  IT Eff R_Neg   Estimate  Acc %  Estimate(+- Error )order  Acc % ( H: M: Sec )
+ ------------------------------------------------------------------------------
+ ******* WARNING FROM BASES *******************
+ *  Negative FUNCTION at IT =  1 , node =   0 *
+ **********************************************
+   1 100  4.47  2.339E-03  1.101  2.339032(+-0.025744)E-03  1.101   0: 0:10.70
+   2 100  5.26  2.276E-03  0.684  2.292760(+-0.013326)E-03  0.581   0: 0:14.25
+ ------------------------------------------------------------------------------
+
+                    ****** END OF BASES *********
+
+
+     <<   Computing Time Information   >>
+
+               (1) For BASES              H: M:  Sec
+                   Overhead           :   0: 0: 0.01
+                   Grid Optim. Step   :   0: 0: 7.16
+                   Integration Step   :   0: 0: 7.08
+                   Go time for all    :   0: 0:14.26
+
+               (2) Expected event generation time
+                   Expected time for 1000 events :      1.90 Sec

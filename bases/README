@@ -1,0 +1,232 @@
+**********************************************************************
+*                                                                    *
+*      Program Structure of BASES/SPRING V5.1 and its Test program   *
+*                                                                    *
+*       S. Kawabata, Comput. Phys. Commun. {\bf 88}(1995)309.        *
+*                                                                    *
+*                                                       1995/11/16   *
+**********************************************************************
+*
+* In this directory, there are readme file and two directories.
+* 
+*     (1) README   : this file
+*     (2) src/     : directory for source program of BASES/SPRING v5.1.
+*     (3) test/    : directory for test program of BASES/SPRING v5.1.
+*     (4) test1/   : directory for test program of BASES/SPRING v5.1
+*                    using CERNLIB.
+*
+* In the directory src/, there are four files;
+*
+*     (1) test.f   : test program of BASES/SPRING V5.1
+*     (2) bases.f  : All program components of BASES/SPRING V5.1
+*     (3) Makefile : For compile and link this test run
+*     (4) result   : Result of test run.
+*
+*  In the following, we describe the Structure of test run program and
+* library of BASES/SPRING V5.1.
+* In the file test.f there are the main program and the function 
+* subprogram FUNC.
+* In the file bases.f there are all components of BASES/SPRING V5.1.
+*
+* (( Caution ))
+*    To know the day and time and the computing time, the cern library
+*  is used.  When you have no permission to use them, please replace
+*  these parts by the relevent routines in your system.
+*  The subroutines BSTIME and BSDATE are to be changed for this 
+*  purpose.
+* 
+*(I)  Structure of Test program.
+*     The total number of lines of test program is 188. 
+*                                 
+*    Main program "test" ( test.f )
+*     |
+*     +-- BSINIT
+*     |
+*     +-- XHINIT( ID, X_low, X_upper, No_bins, 'title' )
+*     |
+*     +-- BASES( FUNC, ESTIM, ERROR, CTIME, IT1, IT2 )
+*     |    |
+*     |    +-- Function program "FUNC" ( test.f )
+*     |
+*     +-- BSINFO( LU )
+*     |
+*     +-- BHPLOT( LU )
+*     |
+*     +-- SPRING( FUNC, MXTRYA )
+*     |
+*     +-- SPINFO( LU )
+*     |
+*     +-- SHPLOT( LU )
+*
+*(II) Program components for BASES/SPRING v5.1 ( bases.f )
+*     The total number of lines of BASES/SPRING program is 4995.
+*
+*   (1) Initialization of BASES/SPRING
+*
+*       BSINIT
+*        |
+*        +-- BSTIME
+*        +-- BHINIT
+*        +-- DRNSET
+*
+*   (2) To change the integration parameters call the following 
+*       subroutines:
+*
+*       BSPARM( NCALL, ACC1, ACC2, IT1, IT2 )
+* 
+*       BSDIMS( NDIM, NWILD, XL, XM )
+*
+*       BSGRID( NDIM, IG )
+*
+*   (3) Numerical integration BASES
+*
+*       BASES( FUNC, ESTIM, ERROR, CTIME, IT1, IT2 )
+*        |
+*        +-- BSCHCK
+*        +-- BSDATE
+*        +-- BSPRNT
+*        +-- BSETGU
+*        +-- BSUTIM
+*        +-- BSINTG
+*        |    |
+*        |    +-- BHRSET
+*        |    +-- BSPRNT
+*        |    +-- BSUTIM
+*        |    +-- DRN
+*        |    +-- FXN(X)
+*        |    +-- BSORDR
+*        |    +-- BHSAVE
+*        |    +-- BSETGV
+*        |
+*        +-- BSUTIM
+*
+*   (3) To print the result of integration
+*
+*       BSINFO( LU )
+*        |
+*        +-- BSPRNT
+*
+*   (4) To print the histograms for the integration step
+*
+*       BHPLOT( LU )
+*        |
+*        +-- XHCHCK
+*        +-- XHPLOT
+*        +-- DHPLOT
+*
+*   (5) To write the probalility information
+*
+*       BSWRIT( LUN )
+*
+*   (6) To read the probalility information
+*
+*       BSREAD( LUN )
+*
+*   (7) Event generation
+*
+*       SPRING( FUNC, MXTRY )
+*        |
+*        +-- SPCHCK
+*        +-- BSTIME
+*        +-- BSDATE
+*        +-- SHINIT
+*        +-- SHRSET
+*        +-- BSUTIM
+*        +-- SPRGEN
+*        |    |
+*        |    +-- DRN
+*        |    +-- FXN(X)
+*        |    +-- SHCLER
+*        |
+*        +-- SHUPDT
+*        +-- SHFILL
+*
+*   (8) To print the result of event generation
+*
+*       SPINFO( LU )
+*        |
+*        +-- SPHIST( LU )
+*        |
+*        +-- XHRNGE
+*        +-- XHSCLE
+*        +-- XHORDR
+*
+*   (9) To print the histograms for the event generation
+*
+*       SHPLOT( LU )
+*        |
+*        +-- XHCHCK
+*        +-- SHUPDT
+*        +-- XHPLOT
+*        +-- XHRNGE
+*        +-- XHSCLE
+*        +-- XHORDR
+*        +-- DHPLOT
+*
+*  (10) subroutines called by the above subroutines
+*
+*       BSPRNT
+*        |
+*        +-- BSTCNV
+*        +-- BSLIST
+*        |    |
+*        |    +-- BSTCNV
+*        |    +-- BSORDR
+*        |
+*        +-- BSORDR
+*
+*       XHPLOT( LU, IFG, IHIST )
+*        |
+*        +-- XHRNGE
+*        +-- XHSCLE
+*        +-- XHORDR
+*
+*       BSUTIM
+*        | 
+*        +-- BSTIME
+*
+*  (11) subroutines for clock or date, which are machine dependent.
+*
+*       BSDATE
+*        |
+*        +-- datime ( machine dependent )
+*        +-- UCOPY
+*
+*       BSTIME
+*        |
+*        +-- TIMEX   ( machine dependent )
+*        +-- TIMEST  ( machine dependent )
+*
+*  (12) Proper histogram and scatter plot routines
+*
+*      (i) Initialization of histogram
+*
+*          CALL XHINIT( ID, DXMIN, DXMAX, NBIN, TNAME)
+*
+*     (ii) Filling histogram
+* 
+*          CALL XHFILL(ID, DX, FX )
+*
+*    (iii) Initialization of scatter plot
+*
+*          CALL DHINIT( ID, DXMIN, DXMAX, NXBIN,
+*                           DYMIN, DYMAX, NYBIN, TNAME )
+*
+*     (iv) Filling scatter plot
+*
+*          CALL DHFILL( ID, DX, DY, FX )
+*
+*  (13) For the parallel computers the following subroutines should
+*       be included.
+*
+*       (i)  BHSUM 
+*
+*      (ii)  BSCAST( NN, NW )
+*
+*     (iii)  BSDSUM( DD, NW )
+*
+*      (iv)  BSISUM( NN, NW )
+*
+*       (v)  DRLOOP( NLOOP )
+*
+**************************************************************************

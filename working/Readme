@@ -1,0 +1,83 @@
+Some example and test results:
+******************************
+Checking symmetry in rapidity between pn and np
+(see summary for BORN in pn.data)
+
+directory      reaction        		sqrt(s)  pt             rapidity
+
+np4 	neutron-proton -> photon X 	5.5 TeV, pt=50 GeV	y=+4
+np2 	neutron-proton -> photon X 	5.5 TeV, pt=50 GeV	y=+2	
+np0 	neutron-proton -> photon X 	5.5 TeV, pt=50 GeV	y=0
+
+pn0 	proton-neutron -> photon X 	5.5 TeV, pt=50 GeV	y=0
+pnm2 	proton-neutron -> photon X 	5.5 TeV, pt=50 GeV      y=-2
+pnm4 	proton-neutron -> photon X 	5.5 TeV, pt=50 GeV      y=-4
+
+
+npm4 	neutron-proton -> photon X 	5.5 TeV, pt=50 GeV	y=-4
+npm2 	neutron-proton -> photon X 	5.5 TeV, pt=50 GeV	y=-2	
+
+
+pn2 	proton-neutron -> photon X 	5.5 TeV, pt=50 GeV      y=+2
+pn4 	proton-neutron -> photon X 	5.5 TeV, pt=50 GeV      y=+4
+
+**************************************************************************
+Comparing to original Aurenche et al.  program
+(without corrections to bremss. from Guillet et al.)
+
+directory 	reaction
+pp_pa      	pp->photon X sqrt(s)=5.5 TeV pt 2.0 -> 400.0  y=0
+           	(abfow structure functions from pdflib)
+
+
+ppm4 		pp->photon X sqrt(s)=5.5 TeV pt =50 GeV  y=-4.0
+pp0		pp->photon X sqrt(s)=5.5 TeV pt =50 GeV  y=0.0
+pp4		pp->photon X sqrt(s)=5.5 TeV pt =50 GeV  y=+4.0
+(see summary in pp.data)
+****************************************************************************
+	   
+For comparison to studies for BNL  from Ina Sarcevic et al.
+(but here cross section per nucleon without corrections for nuclear effect)
+
+directory
+ina   pb/GeV**2
+Au-Au -> pio X sqrt(s)=200 GeV pt=10 GeV/c, averaged in rapidity -0.5 to 0.5,
+renor scale=facto sace =frag scale = 1.PT**2
+with BKK fragmentation function
+and MRS 99 structure function
+
+ina_bkk  mb/GeV**2
+Au-Au -> pio X sqrt(s)=200 GeV pt=10 GeV/c, averaged in rapidity -0.35 to 0.35,
+renor scale=facto sace =frag scale = 1.PT**2 
+with BKK fragmentation function
+and MRS 99 structure function
+
+ina_kkp mb/GeV**2
+Au-Au -> pio X sqrt(s)=200 GeV pt=10 GeV/c,  averaged in rapidity -0.35 to 0.35,
+renor scale=facto sace =frag scale = 1.PT**2
+with KKP fragmentation function
+and MRS 99 structure function
+
+**********************************************************************************
+
+Checking symmetry Be Au -> pio X at y=+3.9
+with Au Be -> pio X at y=-3.9
+directory pio and pio_inv
+
+**********************************************************************************
+Compare BKK and KKP fragmentation for E706 p Be -> pio X
+
+directories  pion_e706_bkk and pion_e706_kkp
+**********************************************************************************
+Verify use of CTEQ5M in pp->pio X at sqrt(s)=5.5TeV
+with pdflib804 or directly
+
+
+directory lhc_kkp    with pdflib804, cteq5m  (executable produced with
+Makefile_home in merged/src)
+
+directory lhc_kkp_cteq5 with cteq5 package (executable
+      obtained by using Makefile_home_cteq5 in merged/src instead
+      of the standard Makefile_home)
+ 
+*******************************************************************************

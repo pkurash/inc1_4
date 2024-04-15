@@ -1,0 +1,33 @@
+ projectile           0
+  Z=   1.0000000000000000     
+  A=   1.0000000000000000     
+ NPTYPRO=           1
+ NGROPRO=           4
+ NSETPRO=          48
+ target           0
+  Z=   1.0000000000000000     
+  A=   1.0000000000000000     
+ NPTYTAR=           1
+ NGROTAR=           4
+ NSETTAR=          48
+ IH3=           0
+ LHIOR=           2
+ IHIOR=           2
+  iord            1
+  ianom=           2
+  ianord=           2
+ jnf=           4
+  isigm            2
+ hc2=   389350000.00000000     
+ iloop=           2
+ jmar=           2
+ ici=           0
+ ymax=  0.12000000000000000     
+ ymin= -0.12000000000000000     
+ lintegy  F
+ nb of pt points=           8
+  pt value    10.000000000000000     
+  pt value    1.0000000000000000     
+  pt value   0.50000000000000000     
+  pt value   0.50000000000000000     
+  pt value   0.50000000000000000     

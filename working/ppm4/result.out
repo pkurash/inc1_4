@@ -1,0 +1,42 @@
+ 
+  STRUCTURE FUNCTIONS FROM PDFLIB
+  THE PROTON STRUCT FUNCT. ARE FROM THE PDFLIB TABLES: NGROUP =  6 NSET = 1
+  THE PROTON : LAMBDA=  0.230
+
+
+
+    PROJECTILE=nucleus   
+  with  Z=   1. A=   1.
+   cross sections are given per nucleon without corrections for nuclear effects
+    TARGET=PROTON    
+ 
+  ORDER OF STR. FUN.= 1  CONVENTION OF STR. FUN.= 0
+  LAMBDA IN STR. FUN.=  0.23 GeV LAMBDA IN ALFAS=  0.23 GeV
+  Q02 VALUES : FOR PROTON Q02=  2.GeV^2  FOR PION=  2.GeV^2
+ 
+  ANOMALOUS PHOTON FRAGMENTATION FROM BOURHIS-GUILLET
+  SET I, SMALL GLUON
+   
+  Units for cross section (hbar*c)^2=  389350000.
+  pb/GeV^2 when (hbar*c)^2 =0.38935D+09 
+  mb/GeV^2 when (hbar*c)^2 =0.38935D0 
+     cross section    E DSIG/D3P
+  at rapidity= -4.
+  Inclusive production of photon
+  ABFS NUMBER OF INTEGRATION POINTS : NVINT= 32   NWINT= 32
+ 
+  RENOR SCALE**2 =   0.499849*PT2 (cc2 is used)
+  FACTO SCALE**2 =   0.499849*PT2 (cc1 is used)
+ 
+  NUMBER OF OPEN FLAVORS= 4
+ 
+  CHARM INCLUDED IN STRUCTURE FUNCTIONS
+     square root of s=  5500.GeV        FQQ=  0.        FQG=  0.        DPQ=
+  0.
+  FACTO SCALE**2 IN FRAG =   0.499849*PT2 (ccd is used)
+  in abfs YMAX  4.70039771
+  in abfs y is  -4.
+   ****** Pt   50. GeV/c  SIGTOT NLL   0.00807963006
+  including   BORN =  0.00349614687     ANOMA =  0.00279726941
+      and HIGH ORDER =  0.00178621377
+  K factor ABFS NLL/BORN   2.31100991

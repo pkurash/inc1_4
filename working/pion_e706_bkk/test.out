@@ -1,0 +1,53 @@
+ projectile 0
+  Z=  1.
+  A=  1.
+ NPTYPRO= 1
+ NGROPRO= 3
+ NSETPRO= 68
+ target 3
+  Z=  4.
+  A=  9.
+ NPTYTAR= 1
+ NGROTAR= 3
+ NSETTAR= 68
+ IH3= 5
+ LHIOR= 4
+ IHIOR= 2
+  iord  1
+  ianom= 2
+  ianord= 1
+ jnf= 4
+  isigm  2
+ hc2=  389350000.
+ iloop= 2
+ jmar= 2
+ ici= 1
+ ymax=  0.5
+ ymin= -1.
+ lintegy  T
+ nb of pt points= 4
+  pt value   4.
+  pt value   4.5
+  pt value   5.
+  pt value   5.5
+ cross section per nucleon
+ ebeam =  800.
+ rs =  38.7686567
+ ichoi_scale= 1
+ cm=  0.5
+ cmu=  0.5
+ cmp=  0.5
+  nucleon as target with Z  4. and A  9.
+   MU=PT*   0.500000E+00  M=PT*   0.500000E+00  MP=PT*   0.500000E+00
+
+   SQUARE ROOT OF S=   0.387687E+02
+
+  MU**2   4. ALFAS   0.295771785
+ PT   4. CSBOR   3380.45588 CSECT   4442.04707 CSECT-CSBOR   1061.5912
+  ERROR On LL  25.5408957 ERROR On NLO  33.3274902
+ PT   4.5 CSBOR   898.63688 CSECT   1254.58565 CSECT-CSBOR   355.948767
+  ERROR On LL  6.68191172 ERROR On NLO  8.45082625
+ PT   5. CSBOR   259.923316 CSECT   382.883429 CSECT-CSBOR   122.960113
+  ERROR On LL  1.92080366 ERROR On NLO  2.62936429
+ PT   5.5 CSBOR   80.350072 CSECT   124.068611 CSECT-CSBOR   43.7185387
+  ERROR On LL  0.581382345 ERROR On NLO  0.817698681

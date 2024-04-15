@@ -1,0 +1,56 @@
+CDECK  ID>, ALFAS.
+
+      DOUBLE PRECISION FUNCTION ALFAS(ILOOP,Q2)
+C THIS FUNCTION COMPUTES ALPHAS AT 1 OR TWO LOOPS (ILOOP=1 or 2)
+C USING TWO METHODS:
+C 1) USING THE FORMULA IN THE PARTICLE DATA BOOK (HMRS,MT...) : C###
+C 2) INVERTING NUMERICALLY THE RG EQUATION (ABFOW) : C**
+C*===================================================================
+C
+C               ALFA STRONG AT 1 OR 2 LOOPS AT SCALE Q2
+C
+C==================================================================  */
+      IMPLICIT REAL*8(A-H,L-Z)
+      COMMON/CONS/PI,GS,GV,GW,N,GTR,CF,PT2,VC
+      COMMON/ALFA/MASCH2,MASBO2,MASTO2,LAMBDA2
+      COMMON/WW/W03,W04,W05,W06,W13,W14,W15,W16
+      EXTERNAL ALF4
+      EXTERNAL ALF5
+      EXTERNAL ALF6
+      NF4 = 4.D0
+      NF5 = 5.D0
+      NF6 = 6.D0
+*
+*               BETA FUNCTION COEFFICIENTS AT 1 AND 2 LOOPS
+*
+      Z2=PI**2/6.D0
+      TR3=3.D0/2.D0
+      TR4=NF4/2.D0
+      TR5=NF5/2.D0
+      TR6=NF6/2.D0
+      W03=(11.D0*N-4.*TR3)/6.D0
+      W04=(11.D0*N-4.*TR4)/6.D0
+      W05=(11.D0*N-4.*TR5)/6.D0
+      W06=(11.D0*N-4.*TR6)/6.D0
+      IF(ILOOP.EQ.2) THEN
+        W13=(17.D0/6.D0*N**2-5.D0/3.D0*N*TR3-CF*TR3)
+        W14=(17.D0/6.D0*N**2-5.D0/3.D0*N*TR4-CF*TR4)
+        W15=(17.D0/6.D0*N**2-5.D0/3.D0*N*TR5-CF*TR5)
+        W16=(17.D0/6.D0*N**2-5.D0/3.D0*N*TR6-CF*TR6)
+      ELSE
+        W13=0.D0
+        W14=0.D0
+        W15=0.D0
+        W16=0.D0
+      ENDIF
+      AL1=DLOG(Q2/LAMBDA2)
+      IF(Q2.GT.MASTO2) THEN
+        ALF2L=1.D0/ALF6(Q2)
+      ELSE IF(Q2.GT.MASBO2) THEN
+        ALF2L=1.D0/ALF5(Q2)
+      ELSE
+        ALF2L=1.D0/ALF4(Q2)
+      ENDIF
+      ALFAS=ALF2L*2.D0*PI
+      RETURN
+      END

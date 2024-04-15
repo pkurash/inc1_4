@@ -1,0 +1,43 @@
+ projectile 3
+  Z=  79.
+  A=  197.
+ NPTYPRO= 1
+ NGROPRO= 3
+ NSETPRO= 89
+ target 3
+  Z=  79.
+  A=  197.
+ NPTYTAR= 1
+ NGROTAR= 3
+ NSETTAR= 89
+ IH3= 5
+ LHIOR= 4
+ IHIOR= 2
+  iord  1
+  ianom= 2
+  ianord= 1
+ jnf= 5
+  isigm  2
+ hc2=  0.38935
+ iloop= 2
+ jmar= 2
+ ici= 0
+ ymax=  0.35
+ ymin= -0.35
+ lintegy  T
+ nb of pt points= 1
+  pt value   10.
+ rs =  200.
+ ichoi_scale= 1
+ cm=  1.
+ cmu=  1.
+ cmp=  1.
+  nucleon as projectile with Z  79. and A  197.
+  nucleon as target with Z  79. and A  197.
+   MU=PT*   0.100000E+01  M=PT*   0.100000E+01  MP=PT*   0.100000E+01
+
+   SQUARE ROOT OF S=   0.200000E+03
+
+  MU**2   100. ALFAS   0.177281996
+ PT   10. CSBOR   6.50156874E-08 CSECT   1.13845786E-07 CSECT-CSBOR 
+  4.88300985E-08 ERROR On LL  5.7806888E-10 ERROR On NLO  6.67391714E-10

@@ -1,0 +1,57 @@
+#
+#   Makefile for GNUmake (use gmake sur HP)
+#
+
+
+FC = f77
+#FFLAGS= -c -fno-globals -Wno-globals
+#FFLAGS =  -V  -cross_reference  -g -check bounds -check overflow -check #underflow
+FFLAGS= -O
+LINKER = $(FC)
+
+
+GRACELDIR     = ../../bases/lib
+BASESLIB      = bases
+
+LIB1_PATH     = ../../pholib/lib
+LIB1          = pho
+LIB3_PATH     = ../../hadlib/lib
+LIB3          = had
+LIB4_PATH     = ../../alfas/lib
+LIB4          = alfas
+LIB5_PATH     = ../../frag/bfg_photon/lib
+LIB5          = bfg_photon
+LIB6_PATH     = ../../frag/hadron/lib
+LIB6          = fra_hadron
+ 
+LIB = -L/cern/pro/lib
+LIBS = -lpdflib804 -lmathlib -lkernlib -lpacklib \
+		-lkernlib-shift
+
+%.o : %.f	
+	$(FC) $(FFLAGS) $< -o $@
+	
+	
+sources = inclnll.f param.f initone.f onestru.f onefra.f \
+          abfs.f  pioincl.f fonfra.f\
+          fonstru.f charnum.c
+          
+
+executable = inclnll
+
+#-----------------
+
+$(executable) : $(sources)
+	rm -f $(executable)
+	$(FC) $(FFLAGS) -o $(executable) $(sources) \
+	-L$(LIB1_PATH) -l$(LIB1) \
+        -L$(LIB3_PATH) -l$(LIB3) \
+	-L$(LIB4_PATH) -l$(LIB4) \
+	-L$(LIB5_PATH) -l$(LIB5) \
+	-L$(LIB6_PATH) -l$(LIB6) \
+	-L$(GRACELDIR) -l$(BASESLIB) $(LIB) $(LIBS)
+	
+
+ 
+
+

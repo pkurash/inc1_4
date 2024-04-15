@@ -1,0 +1,38 @@
+#
+# Makefile for library ALFAS
+#
+#
+FC	= f77
+FFLAGS	= -O
+SHELL         = /bin/csh
+AR		= /usr/bin/ar
+# for SUN.OS DEC
+#RANLIB		= /usr/bin/ranlib
+# for HP
+RANLIB		= /bin/ar ts
+#FC            = f77
+#FFLAGS        = +ppu +z -K
+#
+LIBBASES      = libalfas.a
+LIBDIR =../lib/.
+#
+#SRCS	= alfas.f alf4.f alf5.f alf6.f altas.f stevenson.f
+SRCS	= alfab.f
+
+
+#OBJS	= alfas.o alf4.o alf5.o alf6.o altas.o stevenson.o
+OBJS	= alfab.o
+
+all:	${LIBBASES}
+
+${LIBBASES}:	${OBJS}
+	${AR} rc ${LIBBASES} $?
+
+tags:${SRCS}
+	${FTAGS} ${SRCS}
+
+install: all
+	cp ${LIBBASES} ${LIBDIR}
+
+clean:
+		rm -f ${LIBBASES} ${OBJS} core

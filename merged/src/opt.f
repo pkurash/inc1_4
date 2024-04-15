@@ -1,0 +1,2 @@
+        COMMON/OPT/ALQ2S
+        COMMON/IOPTI/IOPT

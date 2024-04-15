@@ -1,0 +1,94 @@
+ 
+  STRUCTURE FUNCTIONS FROM PDFLIB
+  THE PROTON STRUCT FUNCT. ARE FROM THE PDFLIB TABLES: NGROUP =            4  NSET =           1
+  THE PROTON : LAMBDA=  0.300
+
+
+
+    PROJECTILE=proton    
+    TARGET=PROTON    
+ 
+  ORDER OF STR. FUN.=           1   CONVENTION OF STR. FUN.=           0
+  LAMBDA IN STR. FUN.=  0.300000000000000       GeV LAMBDA IN ALFAS=  0.300000000000000       GeV
+  Q02 VALUES : FOR PROTON Q02=   1.25000000000000      GeV^2  FOR PION=   1.25000000000000      GeV^2
+ 
+ PI0 FRAGMENTATION FROM KKP
+   
+  Units for cross section (hbar*c)^2=   389350000.000000     
+  pb/GeV^2 when (hbar*c)^2 =0.38935D+09 
+  mb/GeV^2 when (hbar*c)^2 =0.38935D0 
+     cross section    E DSIG/D3P
+  at rapidity=   0.00000000000000     
+  Inclusive production of pi^0
+  
+   ****** Pt    2.00000000000000       GeV/c  SIGTOT NLL    450046468.180508     
+     where  BORN =   130932066.374898       and HIGH ORDER =   319114401.805610     
+  K factor  fragmentation  NLL/BORN    3.43725170342833     
+  
+   ****** Pt    3.00000000000000       GeV/c  SIGTOT NLL    53679391.2697650     
+     where  BORN =   20967192.1664888       and HIGH ORDER =   32712199.1032762     
+  K factor  fragmentation  NLL/BORN    2.56016117196460     
+  
+   ****** Pt    4.00000000000000       GeV/c  SIGTOT NLL    11306099.0644627     
+     where  BORN =   5115892.03430381       and HIGH ORDER =   6190207.03015892     
+  K factor  fragmentation  NLL/BORN    2.20999563490618     
+  
+   ****** Pt    5.00000000000000       GeV/c  SIGTOT NLL    3304794.20059930     
+     where  BORN =   1652019.26172232       and HIGH ORDER =   1652774.93887698     
+  K factor  fragmentation  NLL/BORN    2.00045742635826     
+  
+   ****** Pt    6.00000000000000       GeV/c  SIGTOT NLL    1199447.93456082     
+     where  BORN =   644548.791855865       and HIGH ORDER =   554899.142704954     
+  K factor  fragmentation  NLL/BORN    1.86091099652397     
+  
+   ****** Pt    7.00000000000000       GeV/c  SIGTOT NLL    502524.015575510     
+     where  BORN =   284765.581792448       and HIGH ORDER =   217758.433783062     
+  K factor  fragmentation  NLL/BORN    1.76469365578659     
+  
+   ****** Pt    8.00000000000000       GeV/c  SIGTOT NLL    235932.671349156     
+     where  BORN =   139397.491146674       and HIGH ORDER =   96535.1802024820     
+  K factor  fragmentation  NLL/BORN    1.69251734309126     
+  
+   ****** Pt    9.00000000000000       GeV/c  SIGTOT NLL    119577.124703935     
+     where  BORN =   73094.4667995860       and HIGH ORDER =   46482.6579043491     
+  K factor  fragmentation  NLL/BORN    1.63592580860871     
+  
+   ****** Pt    10.0000000000000       GeV/c  SIGTOT NLL    65481.4920851846     
+     where  BORN =   41186.9727387530       and HIGH ORDER =   24294.5193464316     
+  K factor  fragmentation  NLL/BORN    1.58985931062549     
+  
+   ****** Pt    11.0000000000000       GeV/c  SIGTOT NLL    37544.5855247703     
+     where  BORN =   24157.0116113825       and HIGH ORDER =   13387.5739133879     
+  K factor  fragmentation  NLL/BORN    1.55418998544836     
+  
+   ****** Pt    12.0000000000000       GeV/c  SIGTOT NLL    22569.2236878361     
+     where  BORN =   14821.3450878090       and HIGH ORDER =   7747.87860002711     
+  K factor  fragmentation  NLL/BORN    1.52275138012946     
+  
+   ****** Pt    13.0000000000000       GeV/c  SIGTOT NLL    14101.3383102634     
+     where  BORN =   9427.33731100429       and HIGH ORDER =   4674.00099925915     
+  K factor  fragmentation  NLL/BORN    1.49579227358326     
+  
+   ****** Pt    14.0000000000000       GeV/c  SIGTOT NLL    9096.16984240299     
+     where  BORN =   6171.44408978280       and HIGH ORDER =   2924.72575262018     
+  K factor  fragmentation  NLL/BORN    1.47391270342419     
+  
+   ****** Pt    15.0000000000000       GeV/c  SIGTOT NLL    6043.41988854707     
+     where  BORN =   4153.36427090239       and HIGH ORDER =   1890.05561764468     
+  K factor  fragmentation  NLL/BORN    1.45506618114044     
+  
+   ****** Pt    16.0000000000000       GeV/c  SIGTOT NLL    4085.74279718728     
+     where  BORN =   2859.00732616552       and HIGH ORDER =   1226.73547102177     
+  K factor  fragmentation  NLL/BORN    1.42907741431606     
+  
+   ****** Pt    18.0000000000000       GeV/c  SIGTOT NLL    2011.55034755856     
+     where  BORN =   1436.81834751331       and HIGH ORDER =   574.732000045250     
+  K factor  fragmentation  NLL/BORN    1.40000324400084     
+  
+   ****** Pt    20.0000000000000       GeV/c  SIGTOT NLL    1065.69037869559     
+     where  BORN =   773.106955116130       and HIGH ORDER =   292.583423579462     
+  K factor  fragmentation  NLL/BORN    1.37845141819415     
+  
+   ****** Pt    25.0000000000000       GeV/c  SIGTOT NLL    272.811361045086     
+     where  BORN =   203.365347438498       and HIGH ORDER =   69.4460136065884     
+  K factor  fragmentation  NLL/BORN    1.34148400640178     

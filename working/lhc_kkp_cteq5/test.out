@@ -1,0 +1,40 @@
+ projectile           0
+  Z=   1.0000000000000000     
+  A=   1.0000000000000000     
+ NPTYPRO=           1
+ NGROPRO=           4
+ NSETPRO=          48
+ target           0
+  Z=   1.0000000000000000     
+  A=   1.0000000000000000     
+ NPTYTAR=           1
+ NGROTAR=           4
+ NSETTAR=          48
+ IH3=           5
+ LHIOR=           4
+ IHIOR=           2
+  iord            1
+  ianom=           2
+  ianord=           2
+ jnf=           5
+  isigm            2
+ hc2=   389350000.00000000     
+ iloop=           2
+ jmar=           2
+ ici=           0
+ ymax=  0.12000000000000000     
+ ymin= -0.12000000000000000     
+ lintegy  F
+ nb of pt points=           1
+  pt value    10.000000000000000     
+ rs =   14000.000000000000     
+ ichoi_scale=           1
+ cm=  0.50000000000000000     
+ cmu=  0.50000000000000000     
+ cmp=  0.50000000000000000     
+   MU=PT*   0.500000E+00  M=PT*   0.500000E+00  MP=PT*   0.500000E+00
+
+   SQUARE ROOT OF S=   0.140000E+05
+
+  MU**2    25.000000000000000       ALFAS   0.21703880523972305     
+ PT    10.000000000000000       CSBOR    128893.15373679143       CSECT    217776.14972421739       CSECT-CSBOR    88882.995987425966       ERROR On LL   688.37418749724054       ERROR On NLO   2685.3460695194485     
