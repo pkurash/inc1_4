@@ -1,5 +1,7 @@
-Working version of old INCNLO generator
+Working version of old INCNLO generator (needed additional options for gfortran command in merge/src/Makefile_home)
 
-Requires newest version cernlib: https://cernlib.web.cern.ch/version.html
+Other Makefiles should be changed similarly when building on other systems (see materials in folder doc for explanation)
+
+Requires newest version of cernlib which can be downloaded here: https://cernlib.web.cern.ch/version.html
 
 TODO: implement most recent PDF-s (https://lhapdf.hepforge.org/pdfsets.html) in Fortan/C++
