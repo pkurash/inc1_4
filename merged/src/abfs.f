@@ -385,8 +385,8 @@ c      write(io,*) 'before nvint'
 C    INITIALIZE AND DO W-INTEGRATION
 C
       L=LOCF(DK12)-LOCF(DBOR1)+2
-c      CALL VZERO(DBOR1,L)
-      CALL VZERO(BE1,L)
+      CALL VZERO(DBOR1,L)
+c      CALL VZERO(BE1,L)
       V = VNT(K)
 c      write(io,*) 'before kinem k',k,'v',v
       CALL KINEM(V,1.D0)
