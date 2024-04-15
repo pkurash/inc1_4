@@ -1,4 +1,4 @@
-Working version of old INCNLO generator (needed additional options for gfortran command in merge/src/Makefile_home)
+Working version of old INCNLO generator https://lapth.cnrs.fr/PHOX_FAMILY/readme_inc.html (needed additional options for gfortran command in merge/src/Makefile_home)
 
 Other Makefiles should be changed similarly when building on other systems (see materials in folder doc for explanation)
 
