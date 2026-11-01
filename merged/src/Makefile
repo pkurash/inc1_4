@@ -9,7 +9,6 @@ FFLAGS=  -O -fno-automatic -std=legacy -no-pie
 
 LINKER = $(FC)
 
-
 GRACELDIR     = ../../bases/lib
 BASESLIB      = bases
 
@@ -24,7 +23,9 @@ LIB5          = bfg_photon
 LIB6_PATH     = ../../frag/hadron/lib
 LIB6          = fra_hadron
  
-LIB = -L/cern/pro/lib
+#LIB = -L/cern/pro/lib
+
+LIB=-L${HOME}/cernlib/cern/new/lib/
 LIBS = -lpdflib804 -lmathlib -lkernlib -lpacklib \
 		-lkernlib-shift
 

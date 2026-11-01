@@ -1,3 +1,15 @@
 pholib/lib/libpho.a
 working/inclnll
 */*/Makefile
+working/param.dat
+alfas/lib/
+bases/lib/
+frag/bfg_photon/lib/
+frag/bfg_photon/src/Makefile
+frag/hadron/lib/
+frag/hadron/src/Makefile
+working/log
+hadlib/lib
+working/lhc_test/result.out
+working/lhc_test/test.out
+working/lhc_test/test.out
